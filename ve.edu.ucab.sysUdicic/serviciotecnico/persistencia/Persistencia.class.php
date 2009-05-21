@@ -25,10 +25,11 @@ class Persistenciaclass {
     function editarCliente ($rif, $nombre,$clave,$telf,$direccion,$descripcion) {
         $resultado =  false;
         $query = "UPDATE CLIENTE SET nombre = '".$nombre."',
-                                              '".$clave."',
-                                              '".$telf."',
-                                              '".$direccion."',
-                                              '".$descripcion."' WHERE rif = '".$rif."'";
+                                              clave = '".$clave."',
+                                              telefono = '".$telf."',
+                                              direccion = '".$direccion."',
+                                              descripcion = '".$descripcion."' WHERE rif = '".$rif."'";
+        echo $query;
         $resultado = $this->transaccion->realizarTransaccion($query);
         return $resultado;
 
@@ -43,8 +44,8 @@ class Persistenciaclass {
 
     function agregarReunion ($fecha,$hora,$detalles,$idProyecto) {
         $resultado =  false;
-        $query = "INSERT INTO REUNION VALUES (NULL,'".$fecha.",'".$hora."','".$detalles."',
-                 '$idProyecto')";
+        $query = "INSERT INTO REUNION VALUES (NULL,'".$fecha."','".$hora."','".$detalles."',
+                 $idProyecto)";
         $resultado = $this->transaccion->realizarTransaccion($query);
         return $resultado;
     }
@@ -53,8 +54,9 @@ class Persistenciaclass {
         $query = "UPDATE REUNION SET fecha= '".$fecha."',
                                      hora = '".$hora."',
                                      detalles= '".$detalles."',
-                                     PROYECTO_idProyecto ='$idProyecto' WHERE id = $id ";
+                                     PROYECTO_idProyecto =$idProyecto WHERE idReunion = $id ";
         $resultado = $this->transaccion->realizarTransaccion($query);
+        echo $query;
         return $resultado;
     }
 
