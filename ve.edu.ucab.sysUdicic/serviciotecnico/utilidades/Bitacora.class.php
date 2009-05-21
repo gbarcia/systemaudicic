@@ -1,5 +1,5 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/com.foo.makororeservas/serviciotecnico/utilidades/TransaccionBD.class.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/ve.edu.ucab.sysUdicic/serviciotecnico/utilidades/TransaccionBD.class.php';
 /**
  * Description of Bitacoraclass
  * Clase manejadora de la bitacora
