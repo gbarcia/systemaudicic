@@ -14,8 +14,11 @@ require_once $_SERVER['DOCUMENT_ROOT']. '/ve.edu.ucab.sysUdicic/serviciotecnico/
 //$persistencia = new Persistenciaclass();
 //$resultado = $persistencia->agregarReunion('2009-12-06', '3:00 PM', 'Detalles', 1);
 //print $resultado;
-//
+////
+//$persistencia = new Persistenciaclass();
+//$resultado = $persistencia->editarReunion(1,'2009-12-06', '3:00 PM', 'Detalles', 1);
+//print $resultado;
 $persistencia = new Persistenciaclass();
-$resultado = $persistencia->editarReunion(1,'2009-12-06', '3:00 PM', 'Detalles', 1);
+$resultado = $persistencia->login('Eliana', '1234');
 print $resultado;
 ?>

@@ -56,7 +56,6 @@ class Persistenciaclass {
                                      detalles= '".$detalles."',
                                      PROYECTO_idProyecto =$idProyecto WHERE idReunion = $id ";
         $resultado = $this->transaccion->realizarTransaccion($query);
-        echo $query;
         return $resultado;
     }
 
