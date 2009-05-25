@@ -1,0 +1,24 @@
+.header {
+    background-image:url('../imagenes/header_background.png');
+    height:117px;
+    position:relative;
+    width:100%;
+    border:solid black 1px;
+}
+.headerLogo{
+    left:10px;
+    position:relative;
+    width:440px;
+}
+.headerScanner {
+    left:0px;
+    position:absolute;
+}
+.headerSys{
+    position:absolute;
+    right:0px;
+}
+.headerCic {
+    position:absolute;
+    right:10px;
+}

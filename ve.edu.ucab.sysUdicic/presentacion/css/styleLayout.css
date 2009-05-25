@@ -1,15 +1,36 @@
-/* 
-Document   : styleLayout
-Created on : May 21, 2009, 6:30:15 PM
-Author     : jonathan
-Description:
-Purpose of the stylesheet follows.
-*/
-
+root {
+    display: block;
+}
+body {
+    margin:10px 0px 0px 0px;
+}
+.content{
+    position:relative;
+    margin-left:10px;
+    margin-right:10px;
+    margin-top:10px;
+    border:black solid 1px;
+}
 .loginPanel {
+    background-color:#eaeaea;
+    border:#a9a9b1 solid 10px;
     margin-left:auto;
     margin-right:auto;
-    width:350px;
-    background-color:yellow;
+    padding:5px;
+    width:250px;
 }
-
+.loginTextField{
+    border:#a9a9b1 solid 1px;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 15px;
+}
+.loginTextField:focus{
+    border:#706488 solid 1px;
+}
+.loginLabel{
+    font-size: 17px;
+    font-family: Arial,Helvetica,sans-serif;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: Arial,Helvetica,sans-serif;
+}
