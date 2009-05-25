@@ -3,12 +3,11 @@
     height:117px;
     position:relative;
     width:100%;
-    border:solid black 1px;
 }
 .headerLogo{
     left:10px;
     position:relative;
-    width:440px;
+    width:430px;
 }
 .headerScanner {
     left:0px;

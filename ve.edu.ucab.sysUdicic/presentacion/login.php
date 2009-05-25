@@ -4,13 +4,12 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>sysUDICIC | Inicio de sesión</title>
         <link rel="stylesheet" type="text/css" href="css/styleMain.css" />
-        <link rel="stylesheet" type="text/css" href="css/styleLogin.css" />
     </head>
     <body>
         <?php
         include 'header.php';
         ?>
-        <div class="content">
+        <div class="content" align="center">
             <div class="loginPanel">
                 <table cellspacing="0" cellpadding="2" border="0">
                     <tbody>
@@ -37,7 +36,7 @@
             </div>
         </div>
         <?php
-        // put your code here
+        include 'footer.php';
         ?>
     </body>
 </html>
