@@ -7,7 +7,6 @@ body {
 .content{
     position:relative;
     margin:10px 10px 10px 10px;
-    border:black solid 1px;
 }
 .loginPanel {
     background-color:#eaeaea;
