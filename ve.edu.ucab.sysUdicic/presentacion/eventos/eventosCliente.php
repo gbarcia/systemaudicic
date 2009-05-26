@@ -32,7 +32,7 @@ function mostrarTablaClientes () {
         $resultado.= '<td>' . $row[descripcion]. '</td>';
         $resultado.= '<td><input type="button" value="EDITAR"
                       onclick="xajax_mostrarFormularioEditar
-                      ('.$row[rif].')"/></td>';
+                      ("'.$row[rif].'")"/></td>';
         $resultado.= '</tr>';
         $color = !$color;
     }
@@ -113,7 +113,7 @@ function mostrarFormularioEditar($rif) {
     </tr>
     <tr>
       <td width="139">R.I.F:</td>
-      <td width="203"><input name="rif" type="text" id="rif" size="20" value="'.$row[rif].'" READONLY() /></td>
+      <td width="203"><input name="rif" type="text" id="rif" size="20" value="'.$row[rif].'"/></td>
     </tr>
     <tr>
       <td colspan="2">&nbsp;</td>
