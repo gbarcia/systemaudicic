@@ -29,7 +29,6 @@ class Persistenciaclass {
                                               telefono = '".$telf."',
                                               direccion = '".$direccion."',
                                               descripcion = '".$descripcion."' WHERE rif = '".$rif."'";
-        echo $query;
         $resultado = $this->transaccion->realizarTransaccion($query);
         return $resultado;
 
