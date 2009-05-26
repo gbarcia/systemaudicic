@@ -18,7 +18,29 @@
             <div class="proyectosPanel">
                 <div id="CollapsiblePanel1" class="CollapsiblePanel">
                     <div class="CollapsiblePanelTab" tabindex="0">PROYECTOS</div>
-                    <div class="CollapsiblePanelContent">Content</div>
+                    <div class="CollapsiblePanelContent">
+                        <ul>
+                            <li class="proyectosPanelCliente">Academia Nacional de la Historia
+                                <ul>
+                                    <li class="proyectosPanelProyecto">Prensa del Siglo XIX</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="proyectosPanelCliente">Acción Democrática
+                                <ul>
+                                    <li class="proyectosPanelProyecto">Periódico Venezuela Democrática</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="proyectosPanelCliente">Universidad Católica Andrés Bello
+                                <ul>
+                                    <li class="proyectosPanelProyecto">Diario La Religión</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="tareasReunionesPanel">

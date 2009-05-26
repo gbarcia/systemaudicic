@@ -35,7 +35,7 @@
  */
 .CollapsiblePanelTab {
 	font: bold 14px sans-serif;
-	background-color: #DDD;
+	background-color: CCC;
 	border-bottom: solid 1px #CCC;
 	margin: 0px;
 	padding: 4px;
@@ -54,6 +54,7 @@
  * CollapsiblePanel content container.
  */
 .CollapsiblePanelContent {
+	background-color: #eaeaea;
 	margin: 0px;
 	padding: 0px;
 }
@@ -73,7 +74,7 @@
  * from panels as the user clicks on the tabs within the CollapsiblePanel.
  */
 .CollapsiblePanelOpen .CollapsiblePanelTab {
-	background-color: #EEE;
+	background-color: #a9a9b1;
 }
 
 /* This is an example of how to change the appearance of the panel tab when the
