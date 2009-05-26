@@ -7,7 +7,7 @@ function mostrarTablaClientes () {
     $controlPersistencia = new Persistenciaclass();
     $recurso = $controlPersistencia->traerTodosLosClientes();
     $resultado = '<form id="formularioEditarMarcar"><fieldset class="fieldSet">
-                    <legend class="legend">Clientes</legend>';
+                    <legend class="legend">Listado</legend>';
     $resultado.= '<table id="dataTable" cellspacing="0" cellpadding="0">';
     $resultado.= '<thead>';
     $resultado.= '<tr>';
@@ -33,6 +33,36 @@ function mostrarTablaClientes () {
     $resultado.= '</form>';
     $objResponse->addAssign("tablaClientes", "innerHTML", $resultado);
     return $objResponse;
+}
+function mostrarTablaClientesString () {
+    $controlPersistencia = new Persistenciaclass();
+    $recurso = $controlPersistencia->traerTodosLosClientes();
+    $resultado = '<form id="formularioEditarMarcar"><fieldset class="fieldSet">
+                    <legend class="legend">Listado</legend>';
+    $resultado.= '<table id="dataTable" cellspacing="0" cellpadding="0">';
+    $resultado.= '<thead>';
+    $resultado.= '<tr>';
+    $resultado.= '<th class="h">RIF</th>';
+    $resultado.= '<th class="h">NOMBRE</th>';
+    $resultado.= '<th class="h">TELEFONO</th>';
+    $resultado.= '<th class="h">DIRECCION</th>';
+    $resultado.= '<th class="h">EDITAR</th>';
+    $resultado.= '</tr>';
+    $resultado.= '</thead>';
+    $color = false;
+    while ($row = mysql_fetch_array($recurso)) {
+        $resultado.= '<td class="cell">' . $row[rif] .'</td>';
+        $resultado.= '<td class="cell">' . $row[nombre]. '</td>';
+        $resultado.= '<td class="cell">' . $row[telefono]. '</td>';
+        $resultado.= '<td class="cell">' . $row[direccion]. '</td>';
+        $resultado.= '<td class="cell"><input type="button" value="EDITAR"
+                      onclick="xajax_mostrarFormularioEditar
+                      (\''. $row[rif] .'\')"/></td>';
+        $resultado.= '</tr>';
+    }
+    $resultado.= '</table>';
+    $resultado.= '</form>';
+    return $resultado;
 }
 
 function mostrarFormularioNuevoCliente () {
@@ -153,11 +183,32 @@ function procesarCliente ($datos) {
     if ($resultado) {
         $mensaje = '<div class="exito">
                           <div class="textoMensaje">Cliente ' . $datos[nombre] . ' registrado con éxito</div></div>';
+        $refrescar = mostrarTablaClientesString();
     }
     else {
-        $mensaje = 'Ocurrio un error durate la operacion. El servidor no se encuentra disponible.';
+        $mensaje = '<div class="error"><div class="textoMensaje">Ocurrio un error durate la operacion. El servidor no se encuentra disponible.</div></div>';
     }
     $objResponse->addAssign("mensaje", "innerHTML", "$mensaje");
+    $objResponse->addAssign("tablaClientes", "innerHTML", "$refrescar");
+    return $objResponse;
+}
+function procesarClienteEditar ($datos) {
+    $mensaje = "";
+    $objResponse = new xajaxResponse();
+    $control = new Persistenciaclass();
+    $resultado = $control->agregarCliente($datos[rif], $datos[nombre],
+        $datos[clave], $datos[telefono],
+        $datos[direccion], $datos[descripcion]);
+    if ($resultado) {
+        $mensaje = '<div class="exito">
+                          <div class="textoMensaje">Cliente ' . $datos[nombre] . ' registrado con éxito</div></div>';
+        $refrescar = mostrarTablaClientesString();
+    }
+    else {
+        $mensaje = '<div class="error"><div class="textoMensaje">Ocurrio un error durate la operacion. El servidor no se encuentra disponible.</div></div>';
+    }
+    $objResponse->addAssign("mensaje", "innerHTML", "$mensaje");
+    $objResponse->addAssign("tablaClientes", "innerHTML", "$refrescar");
     return $objResponse;
 }
 
