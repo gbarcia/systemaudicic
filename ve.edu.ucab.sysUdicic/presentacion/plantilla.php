@@ -4,6 +4,8 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>sysUDICIC | Nombre</title>
         <link rel="stylesheet" type="text/css" href="css/styleMain.css" />
+        <script src="SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
+        <link href="SpryAssets/SpryMenuBarHorizontal.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
         <?php

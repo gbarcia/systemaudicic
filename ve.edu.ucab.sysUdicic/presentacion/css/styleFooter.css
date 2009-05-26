@@ -1,8 +1,13 @@
+.footerSeparator{
+    clear:both;
+    height:10px;
+}
 .footer {
     background-color:#a9a9b1;
     border-top:1px solid #000;
     border-bottom:1px solid #000;
     font: 1em/20px Arial, Helvetica, sans-serif;
+    margin-bottom:10px;
     position:relative;
     width:100%;
 }
