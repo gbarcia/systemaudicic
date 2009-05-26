@@ -40,7 +40,63 @@ function mostrarTablaClientes () {
     $resultado.= '</form>';
     $objResponse->addAssign("tablaClientes", "innerHTML", $resultado);
     return $objResponse;
-    }
+}
+
+function mostrarFormularioNuevoCliente () {
+    $objResponse = new xajaxResponse();
+    $formulario = '<form id="formularioNuevoCliente" >
+  <table width="342" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td colspan="2">Nuevo Cliente</td>
+    </tr>
+    <tr>
+      <td colspan="2">&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="139">R.I.F:</td>
+      <td width="203"><input name="rif" type="text" id="rif" size="20" /></td>
+    </tr>
+    <tr>
+      <td colspan="2">&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Nombre:</td>
+      <td><input name="nombre" type="text" id="nombre" size="20" /></td>
+    </tr>
+    <tr>
+      <td colspan="2">&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Clave:</td>
+      <td><input name="clave" type="text" id="clave" size="20" /></td>
+    </tr>
+    <tr>
+      <td colspan="2">&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Teléfono:</td>
+      <td><input name="telefono" type="text" id="telefono" size="20" /></td>
+    </tr>
+    <tr>
+      <td colspan="2">&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Dirección:</td>
+      <td><textarea name="textfield" cols="20" id="direccion"></textarea></td>
+    </tr>
+    <tr>
+      <td colspan="2">&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="2"><div align="center">
+          <input type="submit" name="button" id="button" value="Registrar" />
+      </div></td>
+    </tr>
+  </table>
+</form>';
+    $objResponse->addAssign("formularioCliente", "innerHTML", "$formulario");
+    return $objResponse;
+}
 
 
 
