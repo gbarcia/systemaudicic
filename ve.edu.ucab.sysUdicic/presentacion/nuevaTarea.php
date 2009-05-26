@@ -16,64 +16,70 @@
             <div class="nuevaTareaLeft">
                 <fieldset class="fieldSet">
                     <legend class="legend">Información</legend>
-                    <table border="1">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                        </tbody>
+                    <table class="formTable" border="0">
+                        <tr>
+                            <td class="formTd">Resumen</td>
+                            <td><input class="formTextField" type="text" name="" value="" size="65" /></td>
+                        </tr>
+                        <tr>
+                            <td class="formTd">Descripción</td>
+                            <td>
+                                <textarea class="formTextField" name="textarea" id="textarea" cols="65" rows="5"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="formTd">Comentario</td>
+                            <td>
+                                <textarea class="formTextField" name="textarea" id="textarea" cols="65" rows="5"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp</td>
+                            <td><input type="submit" value="Crear" /></td>
+                        </tr>
                     </table>
                 </fieldset>
             </div>
             <div class="nuevaTareaRight">
                 <fieldset class="fieldSet">
                     <legend class="legend">Objetivo</legend>
+                    <table class="formTable" border="0">
+                        <tr>
+                            <td class="formTd">Proyecto</td>
+                            <td>
+                                <select>
+                                    <optgroup label="Academia Nacional de la Historia ">
+                                        <option selected>Prensa del Siglo XIX</option>
+                                    </optgroup>
+                                    <optgroup label="Acción Democrática ">
+                                        <option>Periódico Venezuela Democrática</option>
+                                    </optgroup>
+                                    <optgroup label="Universidad Católica Andrés Bello ">
+                                        <option>Diario La Religión</option>
+                                    </optgroup>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="formTd">Asignada a</td>
+                            <td><select name="">
+                                    <option></option>
+                                    <option></option>
+                            </select></td>
+                        </tr>
+                    </table>
                 </fieldset>
                 <fieldset class="fieldSet">
                     <legend class="legend">Dependencias</legend>
+                    <table class="formTable" border="0">
+                        <tr>
+                            <td class="formTd">Depende de</td>
+                            <td><select name="">
+                                    <option></option>
+                                    <option></option>
+                            </select></td>
+                        </tr>
+                    </table>
                 </fieldset>
             </div>
         </div>
