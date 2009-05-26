@@ -13,6 +13,7 @@
         include 'menu.php';
         ?>
         <div class="content">
+            <h3>Nueva Tarea</h3>
             <div class="nuevaTareaLeft">
                 <fieldset class="fieldSet">
                     <legend class="legend">Información</legend>
@@ -24,13 +25,13 @@
                         <tr>
                             <td class="formTd">Descripción</td>
                             <td>
-                                <textarea class="formTextField" name="textarea" id="textarea" cols="65" rows="5"></textarea>
+                                <textarea class="formTextField" name="textarea" id="textarea" cols="65" rows="8"></textarea>
                             </td>
                         </tr>
                         <tr>
                             <td class="formTd">Comentario</td>
                             <td>
-                                <textarea class="formTextField" name="textarea" id="textarea" cols="65" rows="5"></textarea>
+                                <textarea class="formTextField" name="textarea" id="textarea" cols="65" rows="8"></textarea>
                             </td>
                         </tr>
                         <tr>
@@ -63,9 +64,35 @@
                         <tr>
                             <td class="formTd">Asignada a</td>
                             <td><select name="">
-                                    <option></option>
-                                    <option></option>
+                                    <option>Da Silva, Eliana</option>
+                                    <option>Barcia, Gerardo</option>
                             </select></td>
+                        </tr>
+                        <tr>
+                            <td class="formTd">Prioridad</td>
+                            <td>
+                                <select>
+                                    <option>Crítica</option>
+                                    <option>Urgente</option>
+                                    <option>Alta</option>
+                                    <option selected="selected">Normal</option>
+                                    <option>Baja</option>
+                                    <option>Muy baja</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="formTd">Importancia</td>
+                            <td>
+                                <select>
+                                    <option>La más alta</option>
+                                    <option>Crítica</option>
+                                    <option>Mayor</option>
+                                    <option selected="selected">Normal</option>
+                                    <option>Menor</option>
+                                    <option>Mínima</option>
+                                </select>
+                            </td>
                         </tr>
                     </table>
                 </fieldset>
@@ -74,10 +101,9 @@
                     <table class="formTable" border="0">
                         <tr>
                             <td class="formTd">Depende de</td>
-                            <td><select name="">
-                                    <option></option>
-                                    <option></option>
-                            </select></td>
+                            <td>
+                                <input class="formTextField" type="text" name="" value="" size="5" />
+                            </td>
                         </tr>
                     </table>
                 </fieldset>
