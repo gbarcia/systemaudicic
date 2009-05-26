@@ -157,14 +157,14 @@ function mostrarFormularioEditar($rif) {
     </tr>
     <tr>
       <td>Dirección:</td>
-      <td><textarea name="textfield" cols="20" id="textfield">'.$row[descripcion].'</textarea></td>
+      <td><textarea name="direccion" cols="20" id="textfield">'.$row[direccion].'</textarea></td>
     </tr>
     <tr>
       <td colspan="2">&nbsp;</td>
     </tr>
     <tr>
       <td colspan="2"><div align="center">
-          <input type="submit" name="button" id="button" value="Actualizar" />
+          <input type="button" name="button" id="button" value="Actualizar" onclick= "xajax_procesarClienteEditar(xajax.getFormValues(\'formularioEditarCliente\'))"/>
       </div></td>
     </tr>
   </table>
