@@ -1,21 +1,21 @@
 <div class="menu">
     <ul id="MenuBar1" class="MenuBarHorizontal">
-        <li><a class="MenuBarItemSubmenu" href="#">Item 1</a>
+        <li><a class="MenuBarItemSubmenu" href="#">Proyectos</a>
             <ul>
-                <li><a href="#">Item 1.1</a></li>
-                <li><a href="#">Item 1.2</a></li>
-                <li><a href="#">Item 1.3</a></li>
+                <li><a href="#">Nuevo Proyecto</a></li>
             </ul>
         </li>
-        <li><a href="#">Item 2</a></li>
-        <li><a class="MenuBarItemSubmenu" href="#">Item 3</a>
+        <li><a href="#">Tareas</a>
             <ul>
-                <li><a href="#">Item 3.1</a></li>
-                <li><a href="#">Item 3.2</a></li>
-                <li><a href="#">Item 3.3</a></li>
+                <li><a href="#"> Nueva Tarea</a></li>
             </ul>
         </li>
-        <li><a href="#">Item 4</a></li>
+        <li><a class="MenuBarItemSubmenu" href="#">Reuniones</a>
+            <ul>
+                <li><a href="#">Nueva Reunion</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Inventario</a></li>
     </ul>
 </div>
 <script type="text/javascript">
