@@ -6,7 +6,8 @@ function mostrarTablaClientes () {
     $objResponse = new xajaxResponse();
     $controlPersistencia = new Persistenciaclass();
     $recurso = $controlPersistencia->traerTodosLosClientes();
-    $resultado = '<form id="formularioEditarMarcar">';
+    $resultado = '<form id="formularioEditarMarcar"><fieldset class="fieldSet">
+                    <legend class="legend">Clientes</legend>';
     $resultado.= '<table cellspacing="0" class="'.CCSTABLA.'">';
     $resultado.= '<thead>';
     $resultado.= '<tr>';
@@ -44,12 +45,9 @@ function mostrarTablaClientes () {
 
 function mostrarFormularioNuevoCliente () {
     $objResponse = new xajaxResponse();
-    $formulario = '<form id="formularioNuevoCliente" >
+    $formulario = '<form id="formularioNuevoCliente" ><fieldset class="fieldSet">
+                    <legend class="legend">Nuevo Cliente</legend>
   <table width="342" border="0" cellspacing="0" cellpadding="0">
-    <tr>
-      <td colspan="2">Nuevo Cliente</td>
-    </tr>
-    <tr>
       <td colspan="2">&nbsp;</td>
     </tr>
     <tr>
@@ -92,7 +90,7 @@ function mostrarFormularioNuevoCliente () {
           <input type="submit" name="button" id="button" value="Registrar" />
       </div></td>
     </tr>
-  </table>
+  </table></fieldset></fieldset>
 </form>';
     $objResponse->addAssign("formularioCliente", "innerHTML", "$formulario");
     return $objResponse;
