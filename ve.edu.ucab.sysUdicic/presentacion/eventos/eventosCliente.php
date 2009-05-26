@@ -8,7 +8,7 @@ function mostrarTablaClientes () {
     $recurso = $controlPersistencia->traerTodosLosClientes();
     $resultado = '<form id="formularioEditarMarcar"><fieldset class="fieldSet">
                     <legend class="legend">Clientes</legend>';
-    $resultado.= '<table cellspacing="0" class="'.CCSTABLA.'">';
+    $resultado.= '<table cellspacing="0" border="1" class="'.CCSTABLA.'">';
     $resultado.= '<thead>';
     $resultado.= '<tr>';
     $resultado.= '<th>RIF</th>';
@@ -101,12 +101,9 @@ function mostrarFormularioEditar($rif) {
     $control = new Persistenciaclass();
     $recurso = $control->buscarCliente($rif);
     $row = mysql_fetch_array($recurso);
-    $formulario = '<form id="formularioEditarCliente">
+    $formulario = '<form id="formularioEditarCliente"><fieldset class="fieldSet">
+                    <legend class="legend">Actualizar Cliente</legend>
   <table width="342" border="0" cellspacing="0" cellpadding="0">
-    <tr>
-      <td colspan="2">Actualizar Cliente</td>
-    </tr>
-    <tr>
       <td colspan="2">&nbsp;</td>
     </tr>
     <tr>
@@ -139,7 +136,7 @@ function mostrarFormularioEditar($rif) {
     </tr>
     <tr>
       <td>Dirección:</td>
-      <td><textarea name="textfield" cols="20" id="textfield">"'.$row[descripcion].'"</textarea></td>
+      <td><textarea name="textfield" cols="20" id="textfield">'.$row[descripcion].'</textarea></td>
     </tr>
     <tr>
       <td colspan="2">&nbsp;</td>
@@ -150,8 +147,25 @@ function mostrarFormularioEditar($rif) {
       </div></td>
     </tr>
   </table>
-</form>';
+</form></legend>';
     $objResponse->addAssign("formularioCliente", "innerHTML", "$formulario");
+    return $objResponse;
+}
+
+function procesarCliente ($datos) {
+    $mensaje = "";
+    $objResponse = new xajaxResponse();
+    $control = new Persistenciaclass();
+    $resultado = $control->agregarCliente($datos[rif], $datos[nombre],
+        $datos[clave], $datos[telfefono],
+        $datos[direccion], $datos[descripcion]);
+    if ($resultado) {
+        $mensaje = 'Cliente ' . $datos[nombre] . ' registrado con éxito';
+    }
+    else {
+        $mensaje = 'Ocurrio un error durate la operacion. El servidor no se encuentra disponible.';
+    }
+    $objResponse->addAssign("mensaje", "innerHTML", "$mensaje");
     return $objResponse;
 }
 
