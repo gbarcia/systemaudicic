@@ -11,8 +11,15 @@ function mostrarFormularioNuevaReunion () {
     <tr>
       <td width="139">Objetivo:</td>
       <td width="203"><select name="proyecto" id="proyecto">
-          <option value="1">Proyecto Tal Cual</option>
-          <option value="2">Proyecto Musea</option>
+        <optgroup label="Academia Nacional de la Historia ">
+         <option value="1" selected>Prensa del Siglo XIX</option>
+         </optgroup>
+         <optgroup label="Acción Democrática ">
+          <option value ="2">Periódico Venezuela Democrática</option>
+          </optgroup>
+          <optgroup label="Universidad Católica Andrés Bello ">
+           <option>Diario La Religión</option>
+           </optgroup>
         </select>
       </td>
     </tr>
