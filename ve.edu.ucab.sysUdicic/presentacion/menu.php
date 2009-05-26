@@ -15,7 +15,13 @@
                 <li><a href="#">Nueva Reunion</a></li>
             </ul>
         </li>
-        <li><a href="#">Inventario</a></li>
+        <li><a class="MenuBarItemSubmenu" href="#">Inventario</a>
+            <ul>
+                <li><a href="#">Nueva Reunion</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Clientes</a></li>
+        <li><a href="#">Usuarios</a></li>
     </ul>
 </div>
 <script type="text/javascript">

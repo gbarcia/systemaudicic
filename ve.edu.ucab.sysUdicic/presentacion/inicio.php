@@ -17,17 +17,17 @@
         <div class="content">
             <div class="proyectosPanel">
                 <div id="CollapsiblePanel1" class="CollapsiblePanel">
-                    <div class="CollapsiblePanelTab" tabindex="0">Proyectos</div>
+                    <div class="CollapsiblePanelTab" tabindex="0">PROYECTOS</div>
                     <div class="CollapsiblePanelContent">Content</div>
                 </div>
             </div>
             <div class="tareasReunionesPanel">
                 <div id="CollapsiblePanel2" class="CollapsiblePanel">
-                    <div class="CollapsiblePanelTab" tabindex="0">Tareas</div>
+                    <div class="CollapsiblePanelTab" tabindex="0">TAREAS</div>
                     <div class="CollapsiblePanelContent">Content</div>
                 </div>
                 <div id="CollapsiblePanel3" class="CollapsiblePanel">
-                    <div class="CollapsiblePanelTab" tabindex="0">Reuniones</div>
+                    <div class="CollapsiblePanelTab" tabindex="0">REUNIONES</div>
                     <div class="CollapsiblePanelContent">Content</div>
                 </div>
             </div>
