@@ -1,6 +1,17 @@
+<?php require_once "Jmaki.php"; ?>
+<?php
+require $_SERVER['DOCUMENT_ROOT'] .'/ve.edu.ucab.sysUdicic/serviciotecnico/utilidades/xajax/xajax.inc.php';
+require $_SERVER['DOCUMENT_ROOT'] .'/ve.edu.ucab.sysUdicic/presentacion/eventos/eventosParteI.php';
+$xajax = new xajax();
+$xajax->registerFunction("procesarTarea");
+$xajax->processRequests();
+?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
     <head>
+        <?
+        $xajax->printJavascript ("../serviciotecnico/utilidades/xajax/");
+        ?>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>sysUDICIC | Nueva Tarea</title>
         <link rel="stylesheet" type="text/css" href="css/styleMain.css" />
@@ -14,6 +25,7 @@
         ?>
         <div class="content">
             <h3>Nueva Tarea</h3>
+            <div id="mensaje" class="mensajePanel"></div>
             <div class="nuevaTareaLeft">
                 <fieldset class="fieldSet">
                     <legend class="legend">Información</legend>
@@ -36,7 +48,7 @@
                         </tr>
                         <tr>
                             <td>&nbsp</td>
-                            <td><input type="submit" value="Crear" /></td>
+                            <td><input type="button" value="Crear" onclick="xajax_procesarTarea()"/></td>
                         </tr>
                     </table>
                 </fieldset>
@@ -49,13 +61,13 @@
                             <td class="formTd">Proyecto</td>
                             <td>
                                 <select>
-                                    <optgroup label="Academia Nacional de la Historia ">
+                                    <optgroup label="Academia Nacional de la Historia">
                                         <option selected>Prensa del Siglo XIX</option>
                                     </optgroup>
-                                    <optgroup label="Acción Democrática ">
+                                    <optgroup label="Acción Democrática">
                                         <option>Periódico Venezuela Democrática</option>
                                     </optgroup>
-                                    <optgroup label="Universidad Católica Andrés Bello ">
+                                    <optgroup label="Universidad Católica Andrés Bello">
                                         <option>Diario La Religión</option>
                                     </optgroup>
                                 </select>
@@ -94,6 +106,14 @@
                                 </select>
                             </td>
                         </tr>
+                        <tr>
+                            <td class="formTd">Fecha Limite</td>
+                            <td>
+                                <?php
+                                addWidget( array("name" => "jquery.datepicker" ));
+                                ?>
+                            </td>
+                        </tr>
                     </table>
                 </fieldset>
                 <fieldset class="fieldSet">
@@ -102,7 +122,18 @@
                         <tr>
                             <td class="formTd">Depende de</td>
                             <td>
-                                <input class="formTextField" type="text" name="" value="" size="5" />
+                                <select>
+                                    <optgroup label="Prensa del Siglo XIX">
+                                        <option selected>Digitalización</option>
+                                    </optgroup>
+                                    <optgroup label="Periódico Venezuela Democrática">
+                                        <option>Digitalización</option>
+                                        <option>Edición</option>
+                                    </optgroup>
+                                    <optgroup label="Universidad Católica Andrés Bello">
+                                        <option>Diario La Religión</option>
+                                    </optgroup>
+                                </select>
                             </td>
                         </tr>
                     </table>
