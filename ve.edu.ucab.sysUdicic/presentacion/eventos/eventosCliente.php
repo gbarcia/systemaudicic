@@ -8,34 +8,26 @@ function mostrarTablaClientes () {
     $recurso = $controlPersistencia->traerTodosLosClientes();
     $resultado = '<form id="formularioEditarMarcar"><fieldset class="fieldSet">
                     <legend class="legend">Clientes</legend>';
-    $resultado.= '<table cellspacing="0" border="1" class="'.CCSTABLA.'">';
+    $resultado.= '<table id="dataTable" cellspacing="0" cellpadding="0">';
     $resultado.= '<thead>';
     $resultado.= '<tr>';
-    $resultado.= '<th>RIF</th>';
-    $resultado.= '<th>NOMBRE</th>';
-    $resultado.= '<th>TELEFONO</th>';
-    $resultado.= '<th>DIRECCION</th>';
-    $resultado.= '<th>DESCRIPCION</th>';
-    $resultado.= '<th>EDITAR</th>';
+    $resultado.= '<th class="h">RIF</th>';
+    $resultado.= '<th class="h">NOMBRE</th>';
+    $resultado.= '<th class="h">TELEFONO</th>';
+    $resultado.= '<th class="h">DIRECCION</th>';
+    $resultado.= '<th class="h">EDITAR</th>';
     $resultado.= '</tr>';
     $resultado.= '</thead>';
     $color = false;
     while ($row = mysql_fetch_array($recurso)) {
-        if ($color){
-            $resultado.= '<tr class="r0">';
-        } else {
-            $resultado.= '<tr class="r1">';
-        }
-        $resultado.= '<td>' . $row[rif] .'</td>';
-        $resultado.= '<td>' . $row[nombre]. '</td>';
-        $resultado.= '<td>' . $row[telefono]. '</td>';
-        $resultado.= '<td>' . $row[direccion]. '</td>';
-        $resultado.= '<td>' . $row[descripcion]. '</td>';
-        $resultado.= '<td><input type="button" value="EDITAR"
+        $resultado.= '<td class="cell">' . $row[rif] .'</td>';
+        $resultado.= '<td class="cell">' . $row[nombre]. '</td>';
+        $resultado.= '<td class="cell">' . $row[telefono]. '</td>';
+        $resultado.= '<td class="cell">' . $row[direccion]. '</td>';
+        $resultado.= '<td class="cell"><input type="button" value="EDITAR"
                       onclick="xajax_mostrarFormularioEditar
                       (\''. $row[rif] .'\')"/></td>';
         $resultado.= '</tr>';
-        $color = !$color;
     }
     $resultado.= '</table>';
     $resultado.= '</form>';
