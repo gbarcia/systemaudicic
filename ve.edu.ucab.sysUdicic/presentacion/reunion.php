@@ -24,7 +24,7 @@ $xajax->processRequests();
         include 'menu.php';
         ?>
         <div class="content">
-        <h3>Nueva Reunion</h3>
+        <h3>Reuniones</h3>
         <div id="mensaje" class="mensajePanel"></div>
             <div id="formularioReunion" class="nuevoClienteLeft">
                 <script language="javaScript">

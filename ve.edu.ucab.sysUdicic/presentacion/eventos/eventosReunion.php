@@ -62,9 +62,7 @@ function procesarReunion ($datos) {
     else {
         $mensaje = '<div class="error"><div class="textoMensaje">Ocurrio un error durate la operacion. El servidor no se encuentra disponible.</div></div>';
     }
-    $refrescar = mostrarTablaClientesString();
     $objResponse->addAssign("mensaje", "innerHTML", "$mensaje");
-    $objResponse->addAssign("tablaClientes", "innerHTML", "$refrescar");
     return $objResponse;
 }
 ?>
