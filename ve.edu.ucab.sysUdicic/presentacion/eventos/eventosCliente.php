@@ -80,18 +80,17 @@ function mostrarFormularioNuevoCliente () {
     </tr>
     <tr>
       <td>Dirección:</td>
-      <td><textarea name="textfield" cols="20" id="direccion"></textarea></td>
+      <td><textarea name="direccion" cols="20" id="direccion"></textarea></td>
     </tr>
     <tr>
       <td colspan="2">&nbsp;</td>
     </tr>
     <tr>
       <td colspan="2"><div align="center">
-          <input type="submit" name="button" id="button" value="Registrar" />
+          <input type="button"id="button" value="Registrar" onclick= "xajax_procesarCliente(xajax.getFormValues(\'formularioNuevoCliente\'))" />
       </div></td>
     </tr>
-  </table></fieldset></fieldset>
-</form>';
+  </table></fieldset></fieldset></form>';
     $objResponse->addAssign("formularioCliente", "innerHTML", "$formulario");
     return $objResponse;
 }
@@ -157,10 +156,11 @@ function procesarCliente ($datos) {
     $objResponse = new xajaxResponse();
     $control = new Persistenciaclass();
     $resultado = $control->agregarCliente($datos[rif], $datos[nombre],
-        $datos[clave], $datos[telfefono],
+        $datos[clave], $datos[telefono],
         $datos[direccion], $datos[descripcion]);
     if ($resultado) {
-        $mensaje = 'Cliente ' . $datos[nombre] . ' registrado con éxito';
+        $mensaje = '<div class="exito">
+                          <div class="textoMensaje">Cliente ' . $datos[nombre] . ' registrado con éxito</div></div>';
     }
     else {
         $mensaje = 'Ocurrio un error durate la operacion. El servidor no se encuentra disponible.';
