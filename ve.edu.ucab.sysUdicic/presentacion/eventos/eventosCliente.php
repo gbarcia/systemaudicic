@@ -32,7 +32,7 @@ function mostrarTablaClientes () {
         $resultado.= '<td>' . $row[descripcion]. '</td>';
         $resultado.= '<td><input type="button" value="EDITAR"
                       onclick="xajax_mostrarFormularioEditar
-                      ("'.$row[rif].'")"/></td>';
+                      (\''. $row[rif] .'\')"/></td>';
         $resultado.= '</tr>';
         $color = !$color;
     }
@@ -113,35 +113,35 @@ function mostrarFormularioEditar($rif) {
     </tr>
     <tr>
       <td width="139">R.I.F:</td>
-      <td width="203"><input name="rif" type="text" id="rif" size="20" value="'.$row[rif].'"/></td>
+      <td width="203"><input name="rif" type="text" id="rif" size="20" value="'.$row[rif].'" readonly="true"/></td>
     </tr>
     <tr>
       <td colspan="2">&nbsp;</td>
     </tr>
     <tr>
       <td>Nombre:</td>
-      <td><input name="nombre" type="text" id="nombre" size="20" /></td>
+      <td><input name="nombre" type="text" id="nombre" size="20" value="'.$row[nombre].'" /></td>
     </tr>
     <tr>
       <td colspan="2">&nbsp;</td>
     </tr>
     <tr>
       <td>Clave:</td>
-      <td><input name="clave" type="text" id="clave" size="20" /></td>
+      <td><input name="clave" type="text" id="clave" size="20" value="'.$row[clave].'" readonly="true" /></td>
     </tr>
     <tr>
       <td colspan="2">&nbsp;</td>
     </tr>
     <tr>
       <td>Teléfono:</td>
-      <td><input name="telefono" type="text" id="telefono" size="20" /></td>
+      <td><input name="telefono" type="text" id="telefono" size="20" value="'.$row[telefono].'" /></td>
     </tr>
     <tr>
       <td colspan="2">&nbsp;</td>
     </tr>
     <tr>
       <td>Dirección:</td>
-      <td><textarea name="textfield" cols="20" id="textfield"></textarea></td>
+      <td><textarea name="textfield" cols="20" id="textfield">"'.$row[descripcion].'"</textarea></td>
     </tr>
     <tr>
       <td colspan="2">&nbsp;</td>
