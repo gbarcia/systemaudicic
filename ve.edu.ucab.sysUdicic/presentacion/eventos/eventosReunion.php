@@ -42,11 +42,29 @@ function mostrarFormularioNuevaReunion () {
     </tr>
     <tr>
       <td colspan="2"><div align="center">
-          <input type="submit" name="button" id="button" value="Registrar" />
+          <input type="button" name="button" id="button" value="Registrar" onclick= "xajax_procesarReunion(xajax.getFormValues(\'formularioNuevaReunion\'))"/>
       </div></td>
     </tr>
   </table></form></legend>';
     $objResponse->addAssign("formularioReunion", "innerHTML", "$formulario");
+    return $objResponse;
+}
+
+function procesarReunion ($datos) {
+    $mensaje = "";
+    $objResponse = new xajaxResponse();
+    $control = new Persistenciaclass();
+    $resultado = $control->agregarReunion($datos[fecha], $datos[hora], $datos[detalles], $datos[proyecto]);
+    if ($resultado) {
+        $mensaje = '<div class="exito">
+                          <div class="textoMensaje">Reunión registrada con éxito</div></div>';
+    }
+    else {
+        $mensaje = '<div class="error"><div class="textoMensaje">Ocurrio un error durate la operacion. El servidor no se encuentra disponible.</div></div>';
+    }
+    $refrescar = mostrarTablaClientesString();
+    $objResponse->addAssign("mensaje", "innerHTML", "$mensaje");
+    $objResponse->addAssign("tablaClientes", "innerHTML", "$refrescar");
     return $objResponse;
 }
 ?>
