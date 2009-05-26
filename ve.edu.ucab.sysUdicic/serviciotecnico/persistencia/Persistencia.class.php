@@ -45,7 +45,7 @@ class Persistenciaclass {
     function agregarReunion ($fecha,$hora,$detalles,$idProyecto) {
         $resultado =  false;
         $query = "INSERT INTO REUNION VALUES (NULL,'".$fecha."','".$hora."','".$detalles."',
-                 $idProyecto)";
+        $idProyecto)";
         $resultado = $this->transaccion->realizarTransaccion($query);
         return $resultado;
     }
@@ -59,14 +59,21 @@ class Persistenciaclass {
         return $resultado;
     }
 
-   function login ($nombre,$clave) {
+    function login ($nombre,$clave) {
         $resultado =  false;
         $can = -1;
         $query = "SELECT * FROM USUARIO WHERE nombre = '".$nombre."' AND clave = '".$clave."'";
         $resultado = $this->transaccion->realizarTransaccion($query);
         $can = mysql_num_rows($resultado);
         return $can;
-   }
+    }
+
+    function traerTodosLosClientes () {
+        $resultado =  false;
+        $query = "SELECT * FROM CLIENTE";
+        $resultado = $this->transaccion->realizarTransaccion($query);
+        return $resultado;
+    }
 
 
 }
