@@ -183,11 +183,11 @@ function procesarCliente ($datos) {
     if ($resultado) {
         $mensaje = '<div class="exito">
                           <div class="textoMensaje">Cliente ' . $datos[nombre] . ' registrado con éxito</div></div>';
-        $refrescar = mostrarTablaClientesString();
     }
     else {
         $mensaje = '<div class="error"><div class="textoMensaje">Ocurrio un error durate la operacion. El servidor no se encuentra disponible.</div></div>';
     }
+    $refrescar = mostrarTablaClientesString();
     $objResponse->addAssign("mensaje", "innerHTML", "$mensaje");
     $objResponse->addAssign("tablaClientes", "innerHTML", "$refrescar");
     return $objResponse;
@@ -196,17 +196,17 @@ function procesarClienteEditar ($datos) {
     $mensaje = "";
     $objResponse = new xajaxResponse();
     $control = new Persistenciaclass();
-    $resultado = $control->agregarCliente($datos[rif], $datos[nombre],
+    $resultado = $control->editarCliente($datos[rif], $datos[nombre],
         $datos[clave], $datos[telefono],
         $datos[direccion], $datos[descripcion]);
     if ($resultado) {
         $mensaje = '<div class="exito">
-                          <div class="textoMensaje">Cliente ' . $datos[nombre] . ' registrado con éxito</div></div>';
-        $refrescar = mostrarTablaClientesString();
+                          <div class="textoMensaje">Cliente ' . $datos[nombre] . ' actualizado con éxito</div></div>';
     }
     else {
         $mensaje = '<div class="error"><div class="textoMensaje">Ocurrio un error durate la operacion. El servidor no se encuentra disponible.</div></div>';
     }
+    $refrescar = mostrarTablaClientesString();
     $objResponse->addAssign("mensaje", "innerHTML", "$mensaje");
     $objResponse->addAssign("tablaClientes", "innerHTML", "$refrescar");
     return $objResponse;
