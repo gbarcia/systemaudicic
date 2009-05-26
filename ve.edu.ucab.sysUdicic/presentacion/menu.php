@@ -5,9 +5,9 @@
                 <li><a href="#">Nuevo Proyecto</a></li>
             </ul>
         </li>
-        <li><a href="#">Tareas</a>
+        <li><a class="MenuBarItemSubmenu" href="#">Tareas</a>
             <ul>
-                <li><a href="#"> Nueva Tarea</a></li>
+                <li><a href="#">Nueva Tarea</a></li>
             </ul>
         </li>
         <li><a class="MenuBarItemSubmenu" href="#">Reuniones</a>
@@ -15,7 +15,7 @@
                 <li><a href="#">Nueva Reunion</a></li>
             </ul>
         </li>
-        <li><a class="MenuBarItemSubmenu" href="#">Inventario</a>
+        <li><a class="MenuBarItemSubmenu" href="#">Inventarios</a>
             <ul>
                 <li><a href="#">Nueva Reunion</a></li>
             </ul>
