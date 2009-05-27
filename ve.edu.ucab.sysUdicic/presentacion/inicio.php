@@ -61,26 +61,21 @@
                                 </ul>
                             </li>
                         </ul>
+                        <div align="center">
+                            <img src="imagenes/graph.png" border="0" alt="sysUDICIC"/>
+                        </div>
                     </div>
                 </div>
                 <div id="CollapsiblePanel3" class="CollapsiblePanel">
-                    <div class="CollapsiblePanelTab" tabindex="0">REUNIONES</div>
+                    <div class="CollapsiblePanelTab" tabindex="0">PROXIMAS REUNIONES</div>
                     <div class="CollapsiblePanelContent">
                         <ul>
-                            <li class="proyectosPanelTarea"><a href="editarTarea.php">Digitalización</a> [Pendiente | Eliana Da Silva]
+                            <li class="proyectosPanelTarea">Prensa del Siglo XIX [Academia Nacional de la Historia]
                                 <ul>
-                                    <li class="proyectosPanelTarea2">Prensa del Siglo XIX</li>
+                                    <li class="proyectosPanelTarea2">17-06-2009 : 10 AM</li>
                                 </ul>
                             </li>
                         </ul>
-                        <ul>
-                            <li class="proyectosPanelTarea"><a href="editarTarea.php">Edición</a> [Pendiente | Eliana Da Silva]
-                                <ul>
-                                    <li class="proyectosPanelTarea2">Periódico Venezuela Democrática</li>
-                                </ul>
-                            </li>
-                        </ul>
-
                     </div>
                 </div>
             </div>
