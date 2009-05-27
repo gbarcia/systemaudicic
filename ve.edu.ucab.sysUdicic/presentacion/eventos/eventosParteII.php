@@ -17,4 +17,13 @@ function procesarIngreso() {
     return $objResponse;
 }
 
+function procesarEgreso() {
+    $objResponse = new xajaxResponse();
+    $mensaje = '<div class="exito"><div class="textoMensaje">
+                    Egreso registrado con éxito
+                </div></div>';
+    $objResponse->addAssign("mensaje", "innerHTML", "$mensaje");
+    return $objResponse;
+}
+
 ?>

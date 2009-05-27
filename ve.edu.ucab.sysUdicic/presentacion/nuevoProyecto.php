@@ -33,7 +33,7 @@ $xajax->processRequests();
                 </tr>
                 <tr>
                     <td class="formTd">Nombre:</td>
-                    <td><input class="formTextField" name="nombre" type="text" id="nombre" /></td>
+                    <td><input class="formTextField" name="nombre" type="text" id="nombre" size="65"/></td>
                 </tr>
                 <tr>
                     <td class="formTd">&nbsp;</td>
@@ -42,9 +42,9 @@ $xajax->processRequests();
                     <td class="formTd">Cliente:</td>
                     <td>
                         <select id="nuevoProyecto" name="nuevoProyecto">
-                            <option value="1">Cliente Uno</option>
-                            <option value="2">Cliente Dos</option>
-                            <option value="3">Cliente Tres</option>
+                            <option value="1">*  Academia Nacional de la Historia</option>
+                            <option value="2">* Acción Democrática</option>
+                            <option value="3">* Universidad Católica Andrés Bello </option>
                         </select>
                     </td>
                 </tr>
@@ -54,7 +54,7 @@ $xajax->processRequests();
                 <tr>
                     <td class="formTd">Descripcion:</td>
                     <td class="formTd">
-                        <textarea class="formTextField" name="descripcion" cols="20" id="descripcion"></textarea>
+                        <textarea class="formTextField" name="descripcion" id="descripcion" cols="65" rows="8"></textarea>
                     </td>
                 </tr>
                 <tr>
