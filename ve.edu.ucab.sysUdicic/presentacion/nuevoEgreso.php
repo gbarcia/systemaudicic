@@ -2,7 +2,7 @@
 require $_SERVER['DOCUMENT_ROOT'] .'/ve.edu.ucab.sysUdicic/serviciotecnico/utilidades/xajax/xajax.inc.php';
 require $_SERVER['DOCUMENT_ROOT'] .'/ve.edu.ucab.sysUdicic/presentacion/eventos/eventosParteII.php';
 $xajax = new xajax();
-$xajax->registerFunction("procesarIngreso");
+$xajax->registerFunction("procesarEgreso");
 $xajax->processRequests();
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -23,9 +23,9 @@ $xajax->processRequests();
         include 'menu.php';
         ?>
         <div class="content">
-            <h3>Nuevo Ingreso</h3>
+            <h3>Nuevo Egreso</h3>
             <div id="mensaje" class="mensajePanel"></div>
-            <div class="nuevaTareaLeft">
+            <div>
                 <fieldset class="fieldSet">
                     <legend class="legend">Información</legend>
                     <table class="formTable" border="0">
@@ -34,8 +34,12 @@ $xajax->processRequests();
                             <td><input class="formTextField" type="text" name="" value="" size="67" /></td>
                         </tr>
                         <tr>
+                            <td class="formTd">A nombre de</td>
+                            <td><input class="formTextField" type="text" name="" value="" size="67" /></td>
+                        </tr>
+                        <tr>
                             <td class="formTd">Fecha</td>
-                            <td><input class="formTextField" type="text" name="" value=""/></td>
+                            <td><input class="formTextField" type="text" name="" value="" /></td>
                         </tr>
                         <tr>
                             <td class="formTd">Forma de pago</td>
@@ -55,35 +59,7 @@ $xajax->processRequests();
                         </tr>
                         <tr>
                             <td>&nbsp</td>
-                            <td><input type="button" value="Crear" onclick="xajax_procesarIngreso()"/></td>
-                        </tr>
-                    </table>
-                </fieldset>
-            </div>
-
-            <div class="nuevaTareaRight">
-                <fieldset class="fieldSet">
-                    <legend class="legend">Proyecto</legend>
-                    <table class="formTable" border="0">
-                        <tr>&nbsp</tr>
-                        <tr>
-                            <td class="formTd">Perteneciente a: </td>
-                            <td>
-                                <select>
-                                    <optgroup label="Academia Nacional de la Historia">
-                                        <option selected>Prensa del Siglo XIX</option>
-                                    </optgroup>
-                                    <optgroup label="Acción Democrática">
-                                        <option>Periódico Venezuela Democrática</option>
-                                    </optgroup>
-                                    <optgroup label="Universidad Católica Andrés Bello">
-                                        <option>Diario La Religión</option>
-                                    </optgroup>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp</td> 
+                            <td><input type="button" value="Crear" onclick="xajax_procesarEgreso()"/></td>
                         </tr>
                     </table>
                 </fieldset>

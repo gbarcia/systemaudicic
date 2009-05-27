@@ -19,6 +19,12 @@
         </li>
         <li><a href="cliente.php">Clientes</a></li>
         <li><a href="usuario.php">Usuarios</a></li>
+        <li><a class="MenuBarItemSubmenu" href="#">Transacción</a>
+            <ul>
+                <li><a href="nuevoIngreso.php">Nuevo Ingreso</a></li>
+                <li><a href="nuevoEgreso.php">Nuevo Egreso</a></li>
+            </ul>
+        </li>
     </ul>
 </div>
 <script type="text/javascript">

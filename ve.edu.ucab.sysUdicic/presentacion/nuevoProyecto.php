@@ -33,7 +33,7 @@ $xajax->processRequests();
                 </tr>
                 <tr>
                     <td class="formTd">Nombre:</td>
-                    <td><input class="formTextField" name="nombre" type="text" id="nombre" size="65"/></td>
+                    <td><input class="formTextField" name="nombre" type="text" id="nombre" size="67"/></td>
                 </tr>
                 <tr>
                     <td class="formTd">&nbsp;</td>
@@ -42,9 +42,9 @@ $xajax->processRequests();
                     <td class="formTd">Cliente:</td>
                     <td>
                         <select id="nuevoProyecto" name="nuevoProyecto">
-                            <option value="1">*  Academia Nacional de la Historia</option>
-                            <option value="2">* Acción Democrática</option>
-                            <option value="3">* Universidad Católica Andrés Bello </option>
+                            <option value="1">Academia Nacional de la Historia</option>
+                            <option value="2">Acción Democrática</option>
+                            <option value="3">Universidad Católica Andrés Bello </option>
                         </select>
                     </td>
                 </tr>
@@ -63,7 +63,7 @@ $xajax->processRequests();
                 <tr>
                     <td></td>
                     <td class="formTd">
-                        <input type="button" value="Registrar" onclick="xajax_procesarProyecto()"/>
+                        <input type="button" value="Crear" onclick="xajax_procesarProyecto()"/>
                     </td>
                 </tr>
             </table>
