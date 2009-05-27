@@ -25,6 +25,7 @@ $xajax->processRequests();
         <div class="content">
             <h3>Nuevo Proyecto</h3>
             <div id="mensaje" class="mensajePanel"></div>
+            <fieldset class="fieldSet">
             <table width="342" border="0" cellspacing="0" cellpadding="0">
                 <tr>
                     <td colspan="2">&nbsp;</td>
@@ -62,6 +63,7 @@ $xajax->processRequests();
                     <input type="button" value="Registrar" onclick="xajax_procesarProyecto()"/></td>
                 </tr>
             </table>
+            </fieldset>
         </div>
         <?php
         include 'footer.php';
