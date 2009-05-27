@@ -72,6 +72,13 @@ class Persistenciaclass {
         $can = mysql_num_rows($resultado);
         return $can;
     }
+    function traerTodosUsuarios () {
+        $resultado =  false;
+        $can = -1;
+        $query = "SELECT * FROM USUARIO";
+        $resultado = $this->transaccion->realizarTransaccion($query);
+        return $resultado;
+    }
 
     function traerTodosLosClientes () {
         $resultado =  false;
@@ -79,7 +86,5 @@ class Persistenciaclass {
         $resultado = $this->transaccion->realizarTransaccion($query);
         return $resultado;
     }
-
-
 }
 ?>
