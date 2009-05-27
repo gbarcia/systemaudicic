@@ -24,6 +24,7 @@ $xajax->processRequests();
         ?>
         <div class="content">
             <h3>Nuevo Proyecto</h3>
+            <div id="mensaje" class="mensajePanel"></div>
             <table width="342" border="0" cellspacing="0" cellpadding="0">
                 <tr>
                     <td colspan="2">&nbsp;</td>
