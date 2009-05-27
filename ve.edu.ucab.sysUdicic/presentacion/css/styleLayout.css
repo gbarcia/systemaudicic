@@ -97,3 +97,22 @@ h1, h2, h3, h4, h5, h6{
     font-family:Arial,Helvetica,sans-serif;
     vertical-align:top;
 }
+.panelSesion{
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    position:absolute;
+    width: auto;
+    height: auto;
+    top:5px;
+    right:5px;
+}
+.tapita{
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    position:absolute;
+    width: 300px;
+    height: 25px;
+    top:5px;
+    right:5px;
+    background-color:white;
+}

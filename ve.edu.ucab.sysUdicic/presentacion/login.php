@@ -16,38 +16,40 @@ $xajax->processRequests();
         <link rel="stylesheet" type="text/css" href="css/styleMain.css" />
     </head>
     <body><form id="formularioEntrada">
-        <?php
-        include 'header.php';
-        ?>
-        <div class="content" align="center">
-            <div id="mensaje" class="mensajePanel"></div>
-            <div class="loginPanel">
-                <table cellspacing="0" cellpadding="2" border="0">
-                    <tbody>
-                        <tr>
-                            <td align="center"><h4>Inicio de sesión</h4></td>
-                        </tr>
-                        <tr>
-                            <td><label class="loginLabel" for="login">Nombre de usuario</label></td>
-                        </tr>
-                        <tr>
-                            <td><input class="loginTextField" type="text" name="nombre" value="" size="20"/></td>
-                        </tr>
-                        <tr>
-                            <td><label class="loginLabel" for="login">Contraseña</label></td>
-                        </tr>
-                        <tr>
-                            <td><input class="loginTextField" type="password" name="clave" value="" size="20"/></td>
-                        </tr>
-                        <tr>
-                            <td align="center"><input type="button" value="Entrar" onclick="xajax_accesoAutorizado(xajax.getFormValues('formularioEntrada'))" /></td>
-                        </tr>
-                    </tbody>
-                </table>
+            <?php
+            include 'header.php';
+            ?>
+            <div class="content" align="center">
+                <div id="mensaje" class="mensajePanel"></div>
+                <div class="loginPanel">
+                    <table cellspacing="0" cellpadding="2" border="0">
+                        <tbody>
+                            <tr>
+                                <td align="center"><h4>Inicio de sesión</h4></td>
+                            </tr>
+                            <tr>
+                                <td><label class="loginLabel" for="login">Nombre de usuario</label></td>
+                            </tr>
+                            <tr>
+                                <td><input class="loginTextField" type="text" name="nombre" value="" size="20"/></td>
+                            </tr>
+                            <tr>
+                                <td><label class="loginLabel" for="login">Contraseña</label></td>
+                            </tr>
+                            <tr>
+                                <td><input class="loginTextField" type="password" name="clave" value="" size="20"/></td>
+                            </tr>
+                            <tr>
+                                <td align="center"><input type="button" value="Entrar" onclick="xajax_accesoAutorizado(xajax.getFormValues('formularioEntrada'))" /></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-        </div>
-        <?php
-        include 'footer.php';
-        ?>
+            <?php
+            include 'footer.php';
+            ?>
+            <div class="tapita">
+            </div>
     </form></body>
 </html>

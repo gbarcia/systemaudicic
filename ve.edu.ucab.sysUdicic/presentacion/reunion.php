@@ -25,11 +25,14 @@ $xajax->processRequests();
         include 'menu.php';
         ?>
         <div class="content">
-        <h3>Reuniones</h3>
-        <div id="busqueda">
-        Buscar: <input name="id" type="text" id="id" size="10" maxlength="10" onkeyup="xajax_mostrarFormularioEditarReunion(1)"/>
-        </div>
-        <div id="mensaje" class="mensajePanel"></div>
+            <h3>Reuniones</h3>
+            <div id="busqueda">
+                <fieldset class="fieldSet">
+                    <legend class="legend">Busqueda</legend>
+                    <input class="formTextField" name="id" type="text" id="id" size="50" maxlength="10" onkeyup="xajax_mostrarFormularioEditarReunion(1)"/>
+                </fieldset>
+            </div>
+            <div id="mensaje" class="mensajePanel"></div>
             <div id="formularioReunion" class="nuevoClienteLeft">
                 <script language="javaScript">
                     xajax_mostrarFormularioNuevaReunion();

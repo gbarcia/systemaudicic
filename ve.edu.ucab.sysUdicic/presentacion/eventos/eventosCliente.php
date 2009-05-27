@@ -69,40 +69,40 @@ function mostrarFormularioNuevoCliente () {
     $objResponse = new xajaxResponse();
     $formulario = '<form id="formularioNuevoCliente" ><fieldset class="fieldSet">
                     <legend class="legend">Nuevo Cliente</legend>
-  <table width="342" border="0" cellspacing="0" cellpadding="0">
+  <table class="formTable" width="342" border="0" cellspacing="0" cellpadding="0">
       <td colspan="2">&nbsp;</td>
     </tr>
     <tr>
-      <td width="139">R.I.F:</td>
-      <td width="203"><input name="rif" type="text" id="rif" size="20" /></td>
-    </tr>
-    <tr>
-      <td colspan="2">&nbsp;</td>
-    </tr>
-    <tr>
-      <td>Nombre:</td>
-      <td><input name="nombre" type="text" id="nombre" size="20" /></td>
+      <td class="formTd" width="139">R.I.F:</td>
+      <td width="203"><input class="formTextField" name="rif" type="text" id="rif" size="20" /></td>
     </tr>
     <tr>
       <td colspan="2">&nbsp;</td>
     </tr>
     <tr>
-      <td>Clave:</td>
-      <td><input name="clave" type="text" id="clave" size="20" /></td>
+      <td class="formTd">Nombre:</td>
+      <td><input class="formTextField" name="nombre" type="text" id="nombre" size="20" /></td>
     </tr>
     <tr>
       <td colspan="2">&nbsp;</td>
     </tr>
     <tr>
-      <td>Teléfono:</td>
-      <td><input name="telefono" type="text" id="telefono" size="20" /></td>
+      <td class="formTd">Clave:</td>
+      <td><input class="formTextField" name="clave" type="text" id="clave" size="20" /></td>
     </tr>
     <tr>
       <td colspan="2">&nbsp;</td>
     </tr>
     <tr>
-      <td>Dirección:</td>
-      <td><textarea name="direccion" cols="20" id="direccion"></textarea></td>
+      <td class="formTd">Teléfono:</td>
+      <td><input class="formTextField" name="telefono" type="text" id="telefono" size="20" /></td>
+    </tr>
+    <tr>
+      <td colspan="2">&nbsp;</td>
+    </tr>
+    <tr>
+      <td class="formTd">Dirección:</td>
+      <td><textarea class="formTextField" name="direccion" cols="20" id="direccion"></textarea></td>
     </tr>
     <tr>
       <td colspan="2">&nbsp;</td>
@@ -124,40 +124,40 @@ function mostrarFormularioEditar($rif) {
     $row = mysql_fetch_array($recurso);
     $formulario = '<form id="formularioEditarCliente"><fieldset class="fieldSet">
                     <legend class="legend">Actualizar Cliente</legend>
-  <table width="342" border="0" cellspacing="0" cellpadding="0">
+  <table class="formTable" width="342" border="0" cellspacing="0" cellpadding="0">
       <td colspan="2">&nbsp;</td>
     </tr>
     <tr>
-      <td width="139">R.I.F:</td>
-      <td width="203"><input name="rif" type="text" id="rif" size="20" value="'.$row[rif].'" readonly="true"/></td>
-    </tr>
-    <tr>
-      <td colspan="2">&nbsp;</td>
-    </tr>
-    <tr>
-      <td>Nombre:</td>
-      <td><input name="nombre" type="text" id="nombre" size="20" value="'.$row[nombre].'" /></td>
+      <td class="formTd" width="139">R.I.F:</td>
+      <td width="203"><input class="formTextField" name="rif" type="text" id="rif" size="20" value="'.$row[rif].'" readonly="true"/></td>
     </tr>
     <tr>
       <td colspan="2">&nbsp;</td>
     </tr>
     <tr>
-      <td>Clave:</td>
-      <td><input name="clave" type="text" id="clave" size="20" value="'.$row[clave].'" readonly="true" /></td>
+      <td class="formTd">Nombre:</td>
+      <td><input class="formTextField" name="nombre" type="text" id="nombre" size="20" value="'.$row[nombre].'" /></td>
     </tr>
     <tr>
       <td colspan="2">&nbsp;</td>
     </tr>
     <tr>
-      <td>Teléfono:</td>
-      <td><input name="telefono" type="text" id="telefono" size="20" value="'.$row[telefono].'" /></td>
+      <td class="formTd">Clave:</td>
+      <td><input class="formTextField" name="clave" type="text" id="clave" size="20" value="'.$row[clave].'" readonly="true" /></td>
     </tr>
     <tr>
       <td colspan="2">&nbsp;</td>
     </tr>
     <tr>
-      <td>Dirección:</td>
-      <td><textarea name="direccion" cols="20" id="textfield">'.$row[direccion].'</textarea></td>
+      <td class="formTd">Teléfono:</td>
+      <td><input class="formTextField" name="telefono" type="text" id="telefono" size="20" value="'.$row[telefono].'" /></td>
+    </tr>
+    <tr>
+      <td colspan="2">&nbsp;</td>
+    </tr>
+    <tr>
+      <td class="formTd">Dirección:</td>
+      <td><textarea class="formTextField" name="direccion" cols="20" id="textfield">'.$row[direccion].'</textarea></td>
     </tr>
     <tr>
       <td colspan="2">&nbsp;</td>
