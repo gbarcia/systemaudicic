@@ -25,10 +25,35 @@ $xajax->processRequests();
         <div class="content">
             <h3>Nuevo Ingreso</h3>
             <div id="mensaje" class="mensajePanel"></div>
-            <div align="left"> left
-            <fieldset class="fieldSet"></fieldset>
+            <div class="nuevaTareaLeft">
+                <fieldset class="fieldSet">
+                    <legend class="legend">Información</legend>
+                </fieldset>
             </div>
-            <div align="right"> right
+            
+            <div class="nuevaTareaRight">
+                <fieldset class="fieldSet">
+                    <legend class="legend">Objetivo</legend>
+                    <table class="formTable" border="0">
+                        <tr>
+                            <td class="formTd">Proyecto</td>
+                            <td>
+                                <select>
+                                    <optgroup label="Academia Nacional de la Historia">
+                                        <option selected>Prensa del Siglo XIX</option>
+                                    </optgroup>
+                                    <optgroup label="Acción Democrática">
+                                        <option>Periódico Venezuela Democrática</option>
+                                    </optgroup>
+                                    <optgroup label="Universidad Católica Andrés Bello">
+                                        <option>Diario La Religión</option>
+                                    </optgroup>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                    </table>
+                </fieldset>
             </div>
         </div>
         <?php

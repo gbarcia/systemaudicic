@@ -33,7 +33,7 @@ $xajax->processRequests();
                 </tr>
                 <tr>
                     <td class="formTd">Nombre:</td>
-                    <td><input name="rif" type="text" id="rif" /></td>
+                    <td><input class="formTextField" name="nombre" type="text" id="nombre" /></td>
                 </tr>
                 <tr>
                     <td class="formTd">&nbsp;</td>
@@ -54,7 +54,7 @@ $xajax->processRequests();
                 <tr>
                     <td class="formTd">Descripcion:</td>
                     <td class="formTd">
-                        <textarea name="descripcion" cols="20" id="descripcion"></textarea>
+                        <textarea class="formTextField" name="descripcion" cols="20" id="descripcion"></textarea>
                     </td>
                 </tr>
                 <tr>
