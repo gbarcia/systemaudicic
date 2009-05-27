@@ -3,10 +3,8 @@ require $_SERVER['DOCUMENT_ROOT'] .'/ve.edu.ucab.sysUdicic/serviciotecnico/utili
 require $_SERVER['DOCUMENT_ROOT'] .'/ve.edu.ucab.sysUdicic/presentacion/eventos/eventosUsuario.php';
 $xajax = new xajax();
 $xajax->registerFunction("mostrarTablaUsuarios");
-$xajax->registerFunction("mostrarFormularioNuevoCliente");
-$xajax->registerFunction("mostrarFormularioEditar");
-$xajax->registerFunction("procesarCliente");
-$xajax->registerFunction("procesarClienteEditar");
+$xajax->registerFunction("mostrarFormularioNuevoUsuario");
+$xajax->registerFunction("procesarUsuario");
 $xajax->processRequests();
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -36,7 +34,7 @@ $xajax->processRequests();
             </div>
             <div id="formularioUsuario"  class="nuevoClienteRight">
                 <script language="javaScript">
-                   // xajax_mostrarFormularioNuevoCliente();
+                    xajax_mostrarFormularioNuevoUsuario();
                 </script>
             </div>
         </div>

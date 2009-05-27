@@ -48,6 +48,13 @@ class Persistenciaclass {
         $resultado = $this->transaccion->realizarTransaccion($query);
         return $resultado;
     }
+    
+    function agregarUsuario ($nombre,$apellido,$clave,$rol) {
+        $resultado =  false;
+        $query = "INSERT INTO USUARIO VALUES (NULL,'".$nombre."','".$apellido."','".$clave."', '".$rol."')";
+        $resultado = $this->transaccion->realizarTransaccion($query);
+        return $resultado;
+    }
     function editarReunion ($id,$fecha,$hora,$detalles,$idProyecto) {
         $resultado =  false;
         $query = "UPDATE REUNION SET fecha= '".$fecha."',
