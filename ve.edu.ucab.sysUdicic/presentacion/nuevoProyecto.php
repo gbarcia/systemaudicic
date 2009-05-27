@@ -1,6 +1,6 @@
 <?php
-require $_SERVER['DOCUMENT_ROOT'] .'/Metodologia/ve.edu.ucab.sysUdicic/serviciotecnico/utilidades/xajax/xajax.inc.php';
-require $_SERVER['DOCUMENT_ROOT'] .'/Metodologia/ve.edu.ucab.sysUdicic/presentacion/eventos/eventosParteII.php';
+require $_SERVER['DOCUMENT_ROOT'] .'/ve.edu.ucab.sysUdicic/serviciotecnico/utilidades/xajax/xajax.inc.php';
+require $_SERVER['DOCUMENT_ROOT'] .'/ve.edu.ucab.sysUdicic/presentacion/eventos/eventosParteII.php';
 $xajax = new xajax();
 $xajax->registerFunction("procesarProyecto");
 $xajax->processRequests();
@@ -8,8 +8,11 @@ $xajax->processRequests();
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
     <head>
+        <?
+        $xajax->printJavascript ("../serviciotecnico/utilidades/xajax/");
+        ?>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>sysUDICIC | Nombre</title>
+        <title>sysUDICIC | Nuevo Proyecto</title>
         <link rel="stylesheet" type="text/css" href="css/styleMain.css" />
         <script src="SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
         <link href="SpryAssets/SpryMenuBarHorizontal.css" rel="stylesheet" type="text/css" />
@@ -20,10 +23,8 @@ $xajax->processRequests();
         include 'menu.php';
         ?>
         <div class="content">
+            <h3>Nuevo Proyecto</h3>
             <table width="342" border="0" cellspacing="0" cellpadding="0">
-                <tr>
-                    <td colspan="2">Nuevo Proyecto</td>
-                </tr>
                 <tr>
                     <td colspan="2">&nbsp;</td>
                 </tr>
