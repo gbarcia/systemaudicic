@@ -46,11 +46,42 @@
             <div class="tareasReunionesPanel">
                 <div id="CollapsiblePanel2" class="CollapsiblePanel">
                     <div class="CollapsiblePanelTab" tabindex="0">TAREAS</div>
-                    <div class="CollapsiblePanelContent">Content</div>
+                    <div class="CollapsiblePanelContent">
+                        <ul>
+                            <li class="proyectosPanelTarea"><a href="editarTarea.php">Digitalización</a> [Pendiente | Eliana Da Silva]
+                                <ul>
+                                    <li class="proyectosPanelTarea2">Prensa del Siglo XIX</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="proyectosPanelTarea"><a href="editarTarea.php">Edición</a> [Pendiente | Eliana Da Silva]
+                                <ul>
+                                    <li class="proyectosPanelTarea2">Periódico Venezuela Democrática</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <div id="CollapsiblePanel3" class="CollapsiblePanel">
                     <div class="CollapsiblePanelTab" tabindex="0">REUNIONES</div>
-                    <div class="CollapsiblePanelContent">Content</div>
+                    <div class="CollapsiblePanelContent">
+                        <ul>
+                            <li class="proyectosPanelTarea"><a href="editarTarea.php">Digitalización</a> [Pendiente | Eliana Da Silva]
+                                <ul>
+                                    <li class="proyectosPanelTarea2">Prensa del Siglo XIX</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="proyectosPanelTarea"><a href="editarTarea.php">Edición</a> [Pendiente | Eliana Da Silva]
+                                <ul>
+                                    <li class="proyectosPanelTarea2">Periódico Venezuela Democrática</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </div>
                 </div>
             </div>
         </div>

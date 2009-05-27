@@ -23,7 +23,7 @@ $xajax->processRequests();
         include 'menu.php';
         ?>
         <div class="content">
-            <h3>Nueva Tarea</h3>
+            <h3>Editar Tarea</h3>
             <div id="mensaje" class="mensajePanel"></div>
             <div class="nuevaTareaLeft">
                 <fieldset class="fieldSet">
