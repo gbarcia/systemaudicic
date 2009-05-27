@@ -102,7 +102,7 @@ function mostrarFormularioNuevoUsuario () {
       <td colspan="2">&nbsp;</td>
     </tr>
       <td colspan="2"><div align="center">
-          <input type="button"id="button" value="Registrar" onclick= "xajax_procesar(xajax.getFormValues(\'formularioNuevoUsuario\'))" />
+          <input type="button"id="button" value="Registrar" onclick= "xajax_procesarUsuario(xajax.getFormValues(\'formularioNuevoUsuario\'))" />
       </div></td>
     </tr>
   </table></fieldset></fieldset></form>';
@@ -110,23 +110,21 @@ function mostrarFormularioNuevoUsuario () {
     return $objResponse;
 }
 
-function procesarCliente ($datos) {
+function procesarUsuario ($datos) {
     $mensaje = "";
     $objResponse = new xajaxResponse();
     $control = new Persistenciaclass();
-    $resultado = $control->agregarCliente($datos[rif], $datos[nombre],
-        $datos[clave], $datos[telefono],
-        $datos[direccion], $datos[descripcion]);
+    $resultado = $control->agregarUsuario($datos[nombre], $datos[apellido], $datos[clave], $datos[rol]);
     if ($resultado) {
         $mensaje = '<div class="exito">
-                          <div class="textoMensaje">Cliente ' . $datos[nombre] . ' registrado con éxito</div></div>';
+                          <div class="textoMensaje">Usuario ' . $datos[nombre] . ' registrado con éxito</div></div>';
     }
     else {
         $mensaje = '<div class="error"><div class="textoMensaje">Ocurrio un error durate la operacion. El servidor no se encuentra disponible.</div></div>';
     }
-    $refrescar = mostrarTablaClientesString();
+    $refrescar = mostrarTablaUsuariosString();
     $objResponse->addAssign("mensaje", "innerHTML", "$mensaje");
-    $objResponse->addAssign("tablaClientes", "innerHTML", "$refrescar");
+    $objResponse->addAssign("tablaUsuarios", "innerHTML", "$refrescar");
     return $objResponse;
 }
 
