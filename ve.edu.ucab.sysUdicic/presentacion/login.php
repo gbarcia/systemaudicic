@@ -31,13 +31,13 @@ $xajax->processRequests();
                             <td><label class="loginLabel" for="login">Nombre de usuario</label></td>
                         </tr>
                         <tr>
-                            <td><input class="loginTextField" type="text" name="login" value="" size="20"/></td>
+                            <td><input class="loginTextField" type="text" name="nombre" value="" size="20"/></td>
                         </tr>
                         <tr>
                             <td><label class="loginLabel" for="login">Contraseña</label></td>
                         </tr>
                         <tr>
-                            <td><input class="loginTextField" type="password" name="password" value="" size="20"/></td>
+                            <td><input class="loginTextField" type="password" name="clave" value="" size="20"/></td>
                         </tr>
                         <tr>
                             <td align="center"><input type="button" value="Entrar" onclick="xajax_accesoAutorizado(xajax.getFormValues('formularioEntrada'))" /></td>
