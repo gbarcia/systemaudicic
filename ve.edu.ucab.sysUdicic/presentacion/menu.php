@@ -10,7 +10,7 @@
                 <li><a href="nuevaTarea.php">Nueva Tarea</a></li>
             </ul>
         </li>
-        <li><a class="MenuBarItemSubmenu" href="reunion.php">Reuniones</a>
+        <li><a href="reunion.php">Reuniones</a>
         </li>
         <li><a class="MenuBarItemSubmenu" href="#">Inventarios</a>
             <ul>
