@@ -16,6 +16,6 @@
     </div>
 </div>
 <div class="panelSesion">
-    eliana | <?php echo (date('d').'-'.date('m').'-'.date('Y'));?> | <a href="login.php">Salir</a>
+    Eliana | <?php echo (date('d').'-'.date('m').'-'.date('Y'));?> | <a href="login.php">Salir</a>
 
 </div>
