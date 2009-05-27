@@ -10,18 +10,15 @@
                 <li><a href="nuevaTarea.php">Nueva Tarea</a></li>
             </ul>
         </li>
-        <li><a class="MenuBarItemSubmenu" href="#">Reuniones</a>
-            <ul>
-                <li><a href="#">Nueva Reunion</a></li>
-            </ul>
+        <li><a class="MenuBarItemSubmenu" href="reunion.php">Reuniones</a>
         </li>
         <li><a class="MenuBarItemSubmenu" href="#">Inventarios</a>
             <ul>
                 <li><a href="reciboInventario.php">Recepción de Inventario</a></li>
             </ul>
         </li>
-        <li><a href="#">Clientes</a></li>
-        <li><a href="#">Usuarios</a></li>
+        <li><a href="cliente.php">Clientes</a></li>
+        <li><a href="usuario.php">Usuarios</a></li>
     </ul>
 </div>
 <script type="text/javascript">
