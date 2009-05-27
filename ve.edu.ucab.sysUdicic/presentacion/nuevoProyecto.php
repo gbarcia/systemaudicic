@@ -26,19 +26,20 @@ $xajax->processRequests();
             <h3>Nuevo Proyecto</h3>
             <div id="mensaje" class="mensajePanel"></div>
             <fieldset class="fieldSet">
+            <legend class="legend">Información</legend>
             <table width="342" border="0" cellspacing="0" cellpadding="0">
                 <tr>
-                    <td colspan="2">&nbsp;</td>
+                    <td class="formTd">&nbsp;</td>
                 </tr>
                 <tr>
-                    <td width="139">Nombre:</td>
-                    <td width="203"><input name="rif" type="text" id="rif" /></td>
+                    <td class="formTd">Nombre:</td>
+                    <td><input name="rif" type="text" id="rif" /></td>
                 </tr>
                 <tr>
-                    <td colspan="2">&nbsp;</td>
+                    <td class="formTd">&nbsp;</td>
                 </tr>
                 <tr>
-                    <td>Cliente:</td>
+                    <td class="formTd">Cliente:</td>
                     <td>
                         <select id="nuevoProyecto" name="nuevoProyecto">
                             <option value="1">Cliente Uno</option>
@@ -48,19 +49,22 @@ $xajax->processRequests();
                     </td>
                 </tr>
                 <tr>
-                    <td colspan="2">&nbsp;</td>
+                    <td class="formTd">&nbsp;</td>
                 </tr>
                 <tr>
-                    <td>Descripcion:</td>
-                    <td><textarea name="descripcion" cols="20" id="descripcion"></textarea></td>
+                    <td class="formTd">Descripcion:</td>
+                    <td class="formTd">
+                        <textarea name="descripcion" cols="20" id="descripcion"></textarea>
+                    </td>
                 </tr>
                 <tr>
-                    <td colspan="2">&nbsp;</td>
+                    <td class="formTd">&nbsp;</td>
                 </tr>
                 <tr>
                     <td></td>
-                    <td colspan="2">
-                    <input type="button" value="Registrar" onclick="xajax_procesarProyecto()"/></td>
+                    <td class="formTd">
+                        <input type="button" value="Registrar" onclick="xajax_procesarProyecto()"/>
+                    </td>
                 </tr>
             </table>
             </fieldset>
