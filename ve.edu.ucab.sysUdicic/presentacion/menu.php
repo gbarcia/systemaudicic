@@ -2,7 +2,7 @@
     <ul id="MenuBar1" class="MenuBarHorizontal">
         <li><a class="MenuBarItemSubmenu" href="#">Proyectos</a>
             <ul>
-                <li><a href="#">Nuevo Proyecto</a></li>
+                <li><a href="nuevoProyecto.php">Nuevo Proyecto</a></li>
             </ul>
         </li>
         <li><a class="MenuBarItemSubmenu" href="#">Tareas</a>
