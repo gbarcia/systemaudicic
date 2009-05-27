@@ -57,6 +57,12 @@ class Persistenciaclass {
         $resultado = $this->transaccion->realizarTransaccion($query);
         return $resultado;
     }
+    function buscarReunion ($id) {
+        $resultado =  false;
+        $query = "SELECT * FROM REUNION WHERE idReunion = $id ";
+        $resultado = $this->transaccion->realizarTransaccion($query);
+        return $resultado;
+    }
 
     function login ($nombre,$clave) {
         $resultado =  false;

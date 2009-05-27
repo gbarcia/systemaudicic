@@ -73,10 +73,12 @@ function procesarReunion ($datos) {
     return $objResponse;
 }
 
-function mostrarFormularioEditarReunion () {
+function mostrarFormularioEditarReunion ($id) {
     $control = new Persistenciaclass();
     $objResponse = new xajaxResponse();
-    $formulario = '<form id="formularioNuevaReunion"><fieldset class="fieldSet">
+    $recurso = $control->buscarReunion($id);
+    $row = mysql_fetch_array($recurso);
+    $formulario = '<form id="formularioEditarReunion"><fieldset class="fieldSet">
                     <legend class="legend">Actualizar Reunion</legend>
   <table width="342" border="0" cellspacing="0" cellpadding="0">
       <td colspan="2">&nbsp;</td>
@@ -101,21 +103,21 @@ function mostrarFormularioEditarReunion () {
     </tr>
     <tr>
       <td>Fecha:</td>
-      <td><input name="fecha" type="text" id="fecha" size="10" maxlength="10" /></td>
+      <td><input name="fecha" type="text" id="fecha" size="10" maxlength="10" value="'.$row[fecha].'" /></td>
     </tr>
     <tr>
       <td colspan="2">&nbsp;</td>
     </tr>
     <tr>
       <td> Hora:</td>
-      <td><input name="hora" type="text" id="hora" size="10" maxlength="10" /></td>
+      <td><input name="hora" type="text" id="hora" size="10" maxlength="10" value="'.$row[hora].'" /></td>
     </tr>
     <tr>
       <td colspan="2">&nbsp;</td>
     </tr>
     <tr>
       <td>Detalles:</td>
-      <td><textarea name="detalles" rows="5" id="textfield"></textarea></td>
+      <td><textarea name="detalles" rows="5" id="textfield">value="'.$row[detalles].'"</textarea></td>
     </tr>
     <tr>
       <td colspan="2">&nbsp;</td>
@@ -126,7 +128,7 @@ function mostrarFormularioEditarReunion () {
       </div></td>
     </tr>
   </table></form></legend>';
-    $objResponse->addAssign("formularioReunion", "innerHTML", "$formulario");
+    $objResponse->addAssign("formularioEditarReunion", "innerHTML", "$formulario");
     return $objResponse;
 }
 ?>

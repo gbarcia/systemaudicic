@@ -4,6 +4,7 @@ require $_SERVER['DOCUMENT_ROOT'] .'/ve.edu.ucab.sysUdicic/presentacion/eventos/
 $xajax = new xajax();
 $xajax->registerFunction("mostrarFormularioNuevaReunion");
 $xajax->registerFunction("procesarReunion");
+$xajax->registerFunction("mostrarFormularioEditarReunion");
 $xajax->processRequests();
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -25,10 +26,17 @@ $xajax->processRequests();
         ?>
         <div class="content">
         <h3>Reuniones</h3>
+        <div id="busqueda">
+        Buscar: <input name="id" type="text" id="id" size="10" maxlength="10" onkeyup="xajax_mostrarFormularioEditarReunion(1)"/>
+        </div>
         <div id="mensaje" class="mensajePanel"></div>
             <div id="formularioReunion" class="nuevoClienteLeft">
                 <script language="javaScript">
                     xajax_mostrarFormularioNuevaReunion();
+                </script>
+            </div>
+            <div id="formularioEditarReunion" class="nuevoClienteRight">
+                <script language="javaScript">
                 </script>
             </div>
         </div>
