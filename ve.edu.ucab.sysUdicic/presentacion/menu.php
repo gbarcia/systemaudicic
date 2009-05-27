@@ -7,7 +7,7 @@
         </li>
         <li><a class="MenuBarItemSubmenu" href="#">Tareas</a>
             <ul>
-                <li><a href="#">Nueva Tarea</a></li>
+                <li><a href="nuevaTarea.php">Nueva Tarea</a></li>
             </ul>
         </li>
         <li><a class="MenuBarItemSubmenu" href="#">Reuniones</a>
@@ -17,7 +17,7 @@
         </li>
         <li><a class="MenuBarItemSubmenu" href="#">Inventarios</a>
             <ul>
-                <li><a href="#">Nueva Reunion</a></li>
+                <li><a href="reciboInventario.php">Recepción de Inventario</a></li>
             </ul>
         </li>
         <li><a href="#">Clientes</a></li>

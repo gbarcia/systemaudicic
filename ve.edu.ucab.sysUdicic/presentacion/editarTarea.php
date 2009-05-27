@@ -2,7 +2,7 @@
 require $_SERVER['DOCUMENT_ROOT'] .'/ve.edu.ucab.sysUdicic/serviciotecnico/utilidades/xajax/xajax.inc.php';
 require $_SERVER['DOCUMENT_ROOT'] .'/ve.edu.ucab.sysUdicic/presentacion/eventos/eventosParteI.php';
 $xajax = new xajax();
-$xajax->registerFunction("procesarTarea");
+$xajax->registerFunction("actualizarTarea");
 $xajax->processRequests();
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -12,7 +12,7 @@ $xajax->processRequests();
         $xajax->printJavascript ("../serviciotecnico/utilidades/xajax/");
         ?>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>sysUDICIC | Nueva Tarea</title>
+        <title>sysUDICIC | Editar Tarea</title>
         <link rel="stylesheet" type="text/css" href="css/styleMain.css" />
         <script src="SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
         <link href="SpryAssets/SpryMenuBarHorizontal.css" rel="stylesheet" type="text/css" />
@@ -31,23 +31,33 @@ $xajax->processRequests();
                     <table class="formTable" border="0">
                         <tr>
                             <td class="formTd">Resumen</td>
-                            <td><input class="formTextField" type="text" name="" value="" size="65" /></td>
+                            <td><input class="formTextField" type="text" name="" value="Digitalización" size="65" /></td>
                         </tr>
                         <tr>
                             <td class="formTd">Descripción</td>
                             <td>
-                                <textarea class="formTextField" name="textarea" id="textarea" cols="65" rows="8"></textarea>
+                                <textarea class="formTextField" name="textarea" id="textarea" cols="65" rows="8">Digitalización de la primera parte del material de la Prensa del Siglo XIX.</textarea>
                             </td>
                         </tr>
                         <tr>
                             <td class="formTd">Comentario</td>
                             <td>
-                                <textarea class="formTextField" name="textarea" id="textarea" cols="65" rows="8"></textarea>
+                                <textarea class="formTextField" name="textarea" id="textarea" cols="65" rows="8">Material medianamente deteriorado.</textarea>
                             </td>
                         </tr>
                         <tr>
                             <td>&nbsp</td>
-                            <td><input type="button" value="Crear" onclick="xajax_procesarTarea()"/></td>
+                            <td>
+                                <select>
+                                    <option selected="selected">Dejar abierta</option>
+                                    <option>Poner En Progreso</option>
+                                    <option>Cerrar</option>
+                                    <option>Poner como Sin Solución</option>
+                                    <option>Poner como Inválida</option>
+                                    <option>Poner como Duplicada</option>
+                                <option value="6">Esperar</option></select>
+                                <input type="button" value="Guardar" onclick="xajax_actualizarTarea()"/>
+                            </td>
                         </tr>
                     </table>
                 </fieldset>
@@ -108,7 +118,7 @@ $xajax->processRequests();
                         <tr>
                             <td class="formTd">Fecha Limite</td>
                             <td>
-                                <input class="formTextField" type="text" name="" value="" />
+                                <input class="formTextField" type="text" name="" value="10-06-2009" />
                             </td>
                         </tr>
                     </table>
