@@ -1,6 +1,6 @@
 <div class="menu">
     <ul id="MenuBar1" class="MenuBarHorizontal">
-        <li><a class="MenuBarItemSubmenu" href="#">Proyectos</a>
+        <li><a class="MenuBarItemSubmenu" href="editarProyecto.php">Proyectos</a>
             <ul>
                 <li><a href="nuevoProyecto.php">Nuevo Proyecto</a></li>
             </ul>
