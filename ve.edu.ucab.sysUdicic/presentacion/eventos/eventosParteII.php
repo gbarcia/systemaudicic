@@ -35,6 +35,15 @@ function actualizarProyecto() {
     return $objResponse;
 }
 
+function actualizarIngreso() {
+    $objResponse = new xajaxResponse();
+    $mensaje = '<div class="exito"><div class="textoMensaje">
+                    Ingreso actualizado con éxito
+                </div></div>';
+    $objResponse->addAssign("mensaje", "innerHTML", "$mensaje");
+    return $objResponse;
+}
+
 function mostrarFormularioEditar($id) {
     if ($id==1){
         $nombre = "PRENSA DEL SIGLO XIX";
@@ -109,6 +118,66 @@ function mostrarFormularioEditar($id) {
                     </table>
 </form></legend>';
     $objResponse->addAssign("formularioProyecto", "innerHTML", "$formulario");
+    return $objResponse;
+}
+
+function mostrarFormularioEditarIngreso($id) {
+    if ($id==1){
+        $nombre = "PRENSA DEL SIGLO XIX";
+        $fecha = '2009-01-31';
+        $monto = 1000;
+        $formaPago = "TARJETA CREDITO";
+        $descripcion = "CANCELACION PRIMERA CUOTA";
+    }
+    if ($id==2){
+        $nombre = "PERIODICO VENEZUELA DEMOCRATICA";
+        $fecha = '2009-03-09';
+        $monto = 750;
+        $formaPago = "EFECTIVO";
+        $descripcion = "CANCELACION SEGUNDA CUOTA";
+    }
+    $objResponse = new xajaxResponse();
+    $formulario = '<form id="formularioEditarCliente"><fieldset class="fieldSet">
+                    <legend class="legend">Actualizar Cliente</legend>
+                    <table class="formTable" border="0">
+                        <tr>
+                            <td class="formTd">Monto</td>
+                            <td><input class="formTextField" type="text" name="" value="'.$monto.'" /></td>
+                        </tr>
+                        <tr>
+                            <td class="formTd">Fecha</td>
+                            <td><input class="formTextField" type="text" name="" value="'.$fecha.'"/></td>
+                        </tr>
+                        <tr>
+                            <td class="formTd">Forma de pago</td>
+                            <td>
+                                <select id="formaPago" name="formaPago"> ';
+                                if($id==1){
+                                $formulario .= '<option value="1">Efectivo</option>
+                                    <option value="2"selected>Tarjeta Credito</option>
+                                    <option value="3">Tarjeta Debito </option> ';
+                                }
+                                if($id==2){
+                                    $formulario .= '<option value="1" selected>Efectivo</option>
+                                    <option value="2">Tarjeta Credito</option>
+                                    <option value="3">Tarjeta Debito </option> ';
+                                }
+                    $formulario .=  '</select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="formTd">Descripción</td>
+                            <td>
+                                <textarea class="formTextField" name="textarea" id="textarea" cols="25" rows="3">'.$descripcion.'</textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp</td>
+                            <td><input type="button" value="Actualizar" onclick="xajax_actualizarIngreso()"/></td>
+                        </tr>
+                    </table>
+</form></legend>';
+    $objResponse->addAssign("formularioIngreso", "innerHTML", "$formulario");
     return $objResponse;
 }
 
