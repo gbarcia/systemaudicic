@@ -44,6 +44,15 @@ function actualizarIngreso() {
     return $objResponse;
 }
 
+function actualizarEgreso() {
+    $objResponse = new xajaxResponse();
+    $mensaje = '<div class="exito"><div class="textoMensaje">
+                    Egreso actualizado con éxito
+                </div></div>';
+    $objResponse->addAssign("mensaje", "innerHTML", "$mensaje");
+    return $objResponse;
+}
+
 function mostrarFormularioEditar($id) {
     if ($id==1){
         $nombre = "PRENSA DEL SIGLO XIX";
@@ -61,8 +70,8 @@ function mostrarFormularioEditar($id) {
         $descripcion = "DIGITALIZACION 5 TOMOS";
     }
     $objResponse = new xajaxResponse();
-    $formulario = '<form id="formularioEditarCliente"><fieldset class="fieldSet">
-                    <legend class="legend">Actualizar Cliente</legend>
+    $formulario = '<form><fieldset class="fieldSet">
+                    <legend class="legend">Actualizar Proyecto</legend>
   <table class="formTable" width="342" border="0" cellspacing="0" cellpadding="0">
                         <td colspan="2">&nbsp;</td>
                         <tr>
@@ -137,8 +146,8 @@ function mostrarFormularioEditarIngreso($id) {
         $descripcion = "CANCELACION SEGUNDA CUOTA";
     }
     $objResponse = new xajaxResponse();
-    $formulario = '<form id="formularioEditarCliente"><fieldset class="fieldSet">
-                    <legend class="legend">Actualizar Cliente</legend>
+    $formulario = '<form><fieldset class="fieldSet">
+                    <legend class="legend">Actualizar Ingreso</legend>
                     <table class="formTable" border="0">
                         <tr>
                             <td class="formTd">Monto</td>
@@ -178,6 +187,49 @@ function mostrarFormularioEditarIngreso($id) {
                     </table>
 </form></legend>';
     $objResponse->addAssign("formularioIngreso", "innerHTML", "$formulario");
+    return $objResponse;
+}
+
+function mostrarFormularioEditarEgreso() {
+    $objResponse = new xajaxResponse();
+    $formulario = '<form><fieldset class="fieldSet">
+                    <legend class="legend">Actualizar Egreso</legend>
+                    <table class="formTable" border="0">
+                        <tr>
+                            <td class="formTd">Monto</td>
+                            <td><input class="formTextField" type="text" name="" value="1200" /></td>
+                        </tr>
+                        <tr>
+                            <td class="formTd">A nombre de</td>
+                            <td><input class="formTextField" type="text" name="" value="ELIANA" /></td>
+                        </tr>
+                        <tr>
+                            <td class="formTd">Fecha</td>
+                            <td><input class="formTextField" type="text" name="" value="2008-12-10" /></td>
+                        </tr>
+                        <tr>
+                            <td class="formTd">Forma de pago</td>
+                            <td>
+                                <select id="formaPago" name="formaPago">
+                                    <option value="1">Efectivo</option>
+                                    <option value="2" selected>Tarjeta Credito</option>
+                                    <option value="3">Tarjeta Debito </option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="formTd">Descripción</td>
+                            <td>
+                                <textarea class="formTextField" name="textarea" id="textarea" cols="23" rows="8">MANTENIMIENTO ESCANER</textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp</td>
+                            <td><input type="button" value="Actualizar" onclick="xajax_actualizarEgreso()"/></td>
+                        </tr>
+                    </table>
+</form></legend>';
+    $objResponse->addAssign("formularioEgreso", "innerHTML", "$formulario");
     return $objResponse;
 }
 
