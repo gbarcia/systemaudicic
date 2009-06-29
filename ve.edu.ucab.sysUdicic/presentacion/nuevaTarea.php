@@ -1,3 +1,4 @@
+<?php require_once "../Jmaki.php"; ?>
 <?php
 require $_SERVER['DOCUMENT_ROOT'] .'/ve.edu.ucab.sysUdicic/serviciotecnico/utilidades/xajax/xajax.inc.php';
 require $_SERVER['DOCUMENT_ROOT'] .'/ve.edu.ucab.sysUdicic/presentacion/eventos/eventosParteI.php';
@@ -9,13 +10,14 @@ $xajax->processRequests();
 <html>
     <head>
         <?
-        $xajax->printJavascript ("../serviciotecnico/utilidades/xajax/");
+        //$xajax->printJavascript ("../serviciotecnico/utilidades/xajax/");
         ?>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>sysUDICIC | Nueva Tarea</title>
         <link rel="stylesheet" type="text/css" href="css/styleMain.css" />
         <script src="SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
         <link href="SpryAssets/SpryMenuBarHorizontal.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="jscolor/jscolor.js"></script>
     </head>
     <body>
         <?php
@@ -47,7 +49,11 @@ $xajax->processRequests();
                         </tr>
                         <tr>
                             <td>&nbsp</td>
-                            <td><input type="button" value="Crear" onclick="xajax_procesarTarea()"/></td>
+                            <td>
+                                <form action="Tarea2.php">
+                                    <input type="submit" value="Crear" name="Crear" />
+                                </form>
+                            </td>
                         </tr>
                     </table>
                 </fieldset>
@@ -58,7 +64,7 @@ $xajax->processRequests();
                     <table class="formTable" border="0">
                         <tr>
                             <td class="formTd">Proyecto</td>
-                            <td>
+                            <td colspan="2">
                                 <select>
                                     <optgroup label="Academia Nacional de la Historia">
                                         <option selected>Prensa del Siglo XIX</option>
@@ -74,19 +80,19 @@ $xajax->processRequests();
                         </tr>
                         <tr>
                             <td class="formTd">Asignada a</td>
-                            <td><select name="">
-                                    <option>Da Silva, Eliana</option>
+                            <td colspan="2"><select name="">
+                                    <option selected>Da Silva, Eliana</option>
                                     <option>Barcia, Gerardo</option>
                             </select></td>
                         </tr>
                         <tr>
                             <td class="formTd">Prioridad</td>
-                            <td>
+                            <td colspan="2">
                                 <select>
                                     <option>Crítica</option>
                                     <option>Urgente</option>
                                     <option>Alta</option>
-                                    <option selected="selected">Normal</option>
+                                    <option selected>Normal</option>
                                     <option>Baja</option>
                                     <option>Muy baja</option>
                                 </select>
@@ -94,12 +100,12 @@ $xajax->processRequests();
                         </tr>
                         <tr>
                             <td class="formTd">Importancia</td>
-                            <td>
+                            <td colspan="2">
                                 <select>
                                     <option>La más alta</option>
                                     <option>Crítica</option>
                                     <option>Mayor</option>
-                                    <option selected="selected">Normal</option>
+                                    <option selected>Normal</option>
                                     <option>Menor</option>
                                     <option>Mínima</option>
                                 </select>
@@ -107,8 +113,85 @@ $xajax->processRequests();
                         </tr>
                         <tr>
                             <td class="formTd">Fecha Limite</td>
-                            <td>
-                                <input class="formTextField" type="text" name="" value="" />
+                            <td colspan="2">
+                                <?php
+                                addWidget( array("name" => "jquery.datepicker" ));
+                                ?>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="formTd">Cronograma</td>
+                            <td class="formTd">
+                                <input name="" type="checkbox" value="">Lunes
+                            </td>
+                            <td class="formTd">
+                                <select name="">
+                                    <option>Seleccione un Turno:</option>
+                                    <option>Mañana</option>
+                                    <option>Tarde</option>
+                                    <option>Ambos Turnos</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="formTd">&nbsp;</td>
+                            <td class="formTd">
+                                <input name="" type="checkbox" value="">Martes
+                            </td>
+                            <td class="formTd">
+                                <select name="">
+                                    <option>Seleccione un Turno:</option>
+                                    <option>Mañana</option>
+                                    <option>Tarde</option>
+                                    <option>Ambos Turnos</option>
+                                </select>
+                            </td>
+                        </tr><tr>
+                            <td class="formTd">&nbsp;</td>
+                            <td class="formTd">
+                                <input name="" type="checkbox" value="">Miercoles
+                            </td>
+                            <td class="formTd">
+                                <select name="">
+                                    <option>Seleccione un Turno:</option>
+                                    <option>Mañana</option>
+                                    <option>Tarde</option>
+                                    <option>Ambos Turnos</option>
+                                </select>
+                            </td>
+                        </tr><tr>
+                            <td class="formTd">&nbsp;</td>
+                            <td class="formTd">
+                                <input name="" type="checkbox" value="">Jueves
+                            </td>
+                            <td class="formTd">
+                                <select name="">
+                                    <option>Seleccione un Turno:</option>
+                                    <option>Mañana</option>
+                                    <option>Tarde</option>
+                                    <option>Ambos Turnos</option>
+                                </select>
+                            </td>
+                        </tr><tr>
+                            <td class="formTd">&nbsp;</td>
+                            <td class="formTd">
+                                <input name="" type="checkbox" value="">Viernes
+                            </td>
+                            <td class="formTd">
+                                <select name="">
+                                    <option>Seleccione un Turno:</option>
+                                    <option>Mañana</option>
+                                    <option>Tarde</option>
+                                    <option>Ambos Turnos</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="formTd">
+                                Color
+                            </td>
+                            <td class="formTd" colspan="2">
+                                <input class="color" type="text" value="">
                             </td>
                         </tr>
                     </table>

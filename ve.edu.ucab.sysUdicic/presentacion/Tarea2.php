@@ -25,8 +25,12 @@ $xajax->processRequests();
         include 'menu.php';
         ?>
         <div class="content">
-            <h3>Editar Tarea</h3>
-            <div id="mensaje" class="mensajePanel"></div>
+            <h3>Tarea</h3>
+            <div class="mensajePanel">
+            <div class="exito"><div class="textoMensaje">
+                    La operación se realizó con éxito.
+            </div></div>
+            </div>
             <div class="nuevaTareaLeft">
                 <fieldset class="fieldSet">
                     <legend class="legend">Información</legend>
@@ -49,19 +53,16 @@ $xajax->processRequests();
                         </tr>
                         <tr>
                             <td>&nbsp</td>
-                            <td class="formTd">
-                                <form action="Tarea2.php">
-                                    
-                                    <select>
-                                        <option selected="selected">Dejar abierta</option>
-                                        <option>Poner En Progreso</option>
-                                        <option>Cerrar</option>
-                                        <option>Poner como Sin Solución</option>
-                                        <option>Poner como Inválida</option>
-                                        <option>Poner como Duplicada</option>
-                                    <option value="6">Esperar</option></select>
-                                    <input type="submit" value="Guardar" name="Guardar" />
-                                </form>
+                            <td>
+                                <select>
+                                    <option selected="selected">Dejar abierta</option>
+                                    <option>Poner En Progreso</option>
+                                    <option>Cerrar</option>
+                                    <option>Poner como Sin Solución</option>
+                                    <option>Poner como Inválida</option>
+                                    <option>Poner como Duplicada</option>
+                                <option value="6">Esperar</option></select>
+                                <input type="button" value="Guardar" onClick="xajax_actualizarTarea()"/>
                             </td>
                         </tr>
                     </table>

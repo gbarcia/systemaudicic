@@ -29,6 +29,8 @@
                 <li><a href="nuevoEgreso.php">Nuevo Egreso</a></li>
             </ul>
         </li>
+        <li><a href="cronograma.php">Cronograma</a>
+        </li>
     </ul>
 </div>
 <script type="text/javascript">

@@ -23,7 +23,7 @@ $xajax->processRequests();
         include 'menu.php';
         ?>
         <div class="content">
-            <h3>Recepción de Inventario</h3>
+            <h3>Edición de Inventario</h3>
             <div id="mensaje" class="mensajePanel"></div>
             <div class="nuevaTareaLeft">
                 <fieldset class="fieldSet">
@@ -31,32 +31,32 @@ $xajax->processRequests();
                     <table class="formTable" border="0">
                         <tr>
                             <td class="formTd">Fecha de Recepción</td>
-                            <td><input class="formTextField" type="text" name="" value="" size="" /></td>
+                            <td><input class="formTextField" type="text" name="" value="01-05-2009" size="" /></td>
                         </tr>
                         <tr>
                             <td class="formTd" colspan="2">Sobre la naturaleza de los materiales:</td>
                         </tr>
                         <tr>
                             <td class="formTd">Titulo</td>
-                            <td><input class="formTextField" type="text" name="" value="" size="50"/></td>
+                            <td><input class="formTextField" type="text" name="" value="La Voz de Valera" size="50"/></td>
                         </tr>
                         <tr>
                             <td class="formTd">Autor</td>
-                            <td><input class="formTextField" type="text" name="" value="" size="50" /></td>
+                            <td><input class="formTextField" type="text" name="" value="Varios Autores" size="50"/></td>
                         </tr>
                         <tr>
                             <td class="formTd">Fecha</td>
-                            <td><input class="formTextField" type="text" name="" value="" /></td>
+                            <td><input class="formTextField" type="text" name="" value="01-01-2008"/></td>
                         </tr>
                         <tr>
                             <td class="formTd">Número de Tomo</td>
-                            <td class="formTd"><input class="formTextField" type="text" name="" value="" size="7"/>
+                            <td class="formTd"><input class="formTextField" type="text" name="" value="1" size="7"/>
                             al
-                            <input class="formTextField" type="text" name="" value="" size="7"/></td>
+                            <input class="formTextField" type="text" name="" value="" size="7" readonly="readonly"/></td>
                         </tr>
                         <tr>
                             <td class="formTd">Promedio de Páginas</td>
-                            <td><input class="formTextField" type="text" name="" value="" /></td>
+                            <td><input class="formTextField" type="text" name="" value="100"/></td>
                         </tr>
                         <tr>
                             <td class="formTd">Observaciones relevantes</td>
@@ -66,8 +66,9 @@ $xajax->processRequests();
                         </tr>
                         <tr>
                             <td class="formTd">&nbsp;</td>
-                            <td>
-                                <input type="button" value="Registrar" onclick="xajax_procesarInventario()"/>
+                            <td  class="formTd">
+                                <input type="checkbox" name="" value="ON" />Retornar y 
+                                <input type="button" value="Guardar" onclick="xajax_procesarInventario()"/>
                             </td>
                         </tr>
                     </table>
@@ -96,7 +97,7 @@ $xajax->processRequests();
                         <tr>
                             <td class="formTd">Fecha estimada de devolución</td>
                             <td>
-                                <input class="formTextField" type="text" name="" value="" />
+                                <input class="formTextField" type="text" name="" value="01-07-2009" />
                             </td>
                         </tr>
                     </table>

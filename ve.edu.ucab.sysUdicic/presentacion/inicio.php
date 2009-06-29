@@ -22,18 +22,16 @@
                         <ul>
                             <li class="proyectosPanelCliente">Academia Nacional de la Historia
                                 <ul>
-                                    <li class="proyectosPanelProyecto">Prensa del Siglo XIX</li>
+                                    <li class="proyectosPanelProyecto">Prensa del Siglo XIX
+
+                                    </li>
                                 </ul>
                             </li>
-                        </ul>
-                        <ul>
                             <li class="proyectosPanelCliente">Acción Democrática
                                 <ul>
                                     <li class="proyectosPanelProyecto">Periódico Venezuela Democrática</li>
                                 </ul>
                             </li>
-                        </ul>
-                        <ul>
                             <li class="proyectosPanelCliente">Universidad Católica Andrés Bello
                                 <ul>
                                     <li class="proyectosPanelProyecto">Diario La Religión</li>
@@ -48,22 +46,19 @@
                     <div class="CollapsiblePanelTab" tabindex="0">TAREAS</div>
                     <div class="CollapsiblePanelContent">
                         <ul>
-                            <li class="proyectosPanelTarea"><a href="editarTarea.php">Digitalización</a> [Pendiente | Eliana Da Silva]
+                            <li class="proyectosPanelTarea"><a href="editarTarea.php">Digitalización</a> [5 días| Eliana Da Silva]
                                 <ul>
                                     <li class="proyectosPanelTarea2">Prensa del Siglo XIX</li>
                                 </ul>
                             </li>
                         </ul>
                         <ul>
-                            <li class="proyectosPanelTarea"><a href="editarTarea.php">Edición</a> [Pendiente | Eliana Da Silva]
+                            <li class="proyectosPanelTarea"><a href="editarTarea.php">Edición</a> [10 días | Eliana Da Silva]
                                 <ul>
                                     <li class="proyectosPanelTarea2">Periódico Venezuela Democrática</li>
                                 </ul>
                             </li>
                         </ul>
-                        <div align="center">
-                            <img src="imagenes/graph.png" border="0" alt="sysUDICIC"/>
-                        </div>
                     </div>
                 </div>
                 <div id="CollapsiblePanel3" class="CollapsiblePanel">
@@ -78,6 +73,17 @@
                         </ul>
                     </div>
                 </div>
+                <div id="CollapsiblePanel4" class="CollapsiblePanel">
+                    <div class="CollapsiblePanelTab" tabindex="0">INVENTARIOS</div>
+                    <div class="CollapsiblePanelContent">
+                        <ul>
+                            <li class="proyectosPanelTarea">Prensa del Siglo XIX [Academia Nacional de la Historia]</li>
+                            <ul>
+                                <li class="proyectosPanelTarea2"><a href="devolucionInventario.php">La Voz de Valera</a>: 01-07-2009</li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
         <?php
@@ -88,6 +94,7 @@
             var CollapsiblePanel1 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel1");
             var CollapsiblePanel2 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel2");
             var CollapsiblePanel3 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel3");
+            var CollapsiblePanel4 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel4");
             //-->
         </script>
     </body>

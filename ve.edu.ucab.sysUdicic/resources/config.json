@@ -1,0 +1,10 @@
+{"config": {
+    "logLevel": "off",
+    "globalTheme": "orange",
+    "theme": "/resources/css/themes/orange/theme.css",
+    "glue": {"includes": [
+        "/glue.js",
+        "/resources/system-glue.js"
+    ]},
+    "version": "1.0"
+}}
