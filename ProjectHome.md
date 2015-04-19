@@ -1,0 +1,1 @@
+Prototipo para sistema gestor de proyectos para la Unidad de Digitalización del Centro para la Investigcion de la Comunicación de la Universidad Católica Andrés Bello. Desarrollado en PHP con AJAX.
